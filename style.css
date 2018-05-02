@@ -82,17 +82,20 @@ article{
 }
 
 table{
-    margin: auto;
+    margin-left: -80px;
+	margin-right: 80px;
 }
 
 td{
-    padding: 15px;
+    padding: 20px;
+
 }
 
 th{
     background-color: #77777E;
     color: #FFF;
     text-align: center;
+
 }
 
 iframe{
