@@ -82,9 +82,11 @@ article{
 }
 
 table{
-    margin-left: -80px;
+	width: 170%;    
+    margin-left: -250px;
 	margin-right: 80px;
 }
+
 
 td{
     padding: 20px;
