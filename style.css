@@ -18,6 +18,10 @@ body{
     position: fixed;
 }
 
+a:hover {
+  color: darkblue;
+}
+
 #nav {
    
     color: #A3A3A3;  
@@ -37,7 +41,7 @@ a{
     vertical-align: middle;
     display: inline-block;
     text-decoration: none;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .logo{
@@ -119,3 +123,4 @@ footer{
 iframe{
     border: none;
 }
+
