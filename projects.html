@@ -1,103 +1,172 @@
 
 <!DOCTYPE html> 
- 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" >
-
-<head>
-<link rel="shortcut icon"  href="image/logo1.jpg"/>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<html lang="en" >
+	<head>
+		<link rel="shortcut icon"  href="image/logo1.jpg"/>
 		<title>Desared Osmanllari</title>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
-
 	<body>
-		<header class="navigation">
 
-		<div id="nav">
-<a class="logo" href="index.html"><img src="image/logo.jpg" height="40" width="80" alt="logo"></a>
-<a href="education.html"><font size="4" >Education</font></a>
-<a href="experiences.html"><font size="4">Experiences</font></a>
-<a href="projects.html"><font size="4">Projects</font></a>
-<a class="contact" href="contact.html"><font size="4">Contact</font></a>
-		</div>
+		<!-- First Header -->
+		<header class="navigation">
+			<div id="nav">
+				<a class="logo" href="index.html">
+					<img src="image/logo.jpg" height="40" width="80" alt="logo">
+				</a>
+				<a href="education.html">
+					<font size="4" >Education</font>
+				</a>
+				<a href="experiences.html">
+					<font size="4">Experiences</font>
+				</a>
+				<a href="projects.html">
+					<font size="4">Projects</font>
+				</a>
+				<a class="contact" href="contact.html">
+					<font size="4">Contact</font>
+				</a>
+			</div>
 		</header>
+
+		<!-- Second Header -->
 		<header class="title">Projects and Papers</header>
 
-<div class="articlecontainerbg" >
-<article>
+		<!-- Article Container -->
+		<div class="articlecontainerbg" >
+			<article>
+				<br/><br/>
+				<h4>
+					<em>
+						<font size="4">
+						Projects
+						</font>
+					</em>
+				</h4>
 
-<br/><br/>
-<h4><em><font size="4">Projects</font></em></h4><br/><br/>
+				<br/><br>
+				<b>
+					<a>
+						1. Conceptualization and Development of a Predictive Big Data Streaming Application in the Context of Automotive Manufacturing (Master Thesis Project).
+					</a>
+				</b>
+				<br/><br/>
+				
+					&nbsp;&nbsp;&nbsp;Data is increasingly affecting the manufacturing industry. Every second, Internet of Things devices generate large amount of sensor data. 
+					Therefore, it becomes necessary to process data not only fast and efficiently, but also instantly. The digitalization of industrial production enables the 
+					usage of data-driven techniques to extract insights and knowledge from large data volumes. Knowledge-discovery in the context of automotive manufacturing 
+					improves the process of decision-making, enables the functionality of intelligent services, and detects occurring manufacturing anomalies. 
+					However, dealing with large volumes of data at high velocity is challenging. Collecting sensor data, configuring a set of anomaly detection rules and 
+					processing/analyzing data in real-time is costly and hardly maintainable. 
+				<br/>
+					&nbsp;&nbsp;&nbsp;In this paper, using the concepts of lambda architecture, a well-defined, efficient, and scalable technique adapted for real-time predictive 
+					maintenance is implemented. On such basis an architecture, which enables both batch and stream processing at low latencies is conceptualized. To prove the 
+					functionality of such a platform, a pilot anomaly detection application is developed. It covers an end-to-end framework, including data sourcing, processing, 
+					transformation, model training, prediction, and visualization. On the batch layer, high volumes of complex historical datasets are analyzed. 
+					Anomaly detection rules (i.e. learning models) are extracted and constantly updated to improve the analysis accuracy. On the speed layer, data is ingested and 
+					analyzed instantly during the manufacturing process. A streaming engine running on the production network enables real-time prediction.
+				<br/><br/>
 
-<b><a>1. Conceptualization and Development of a Predictive Big Data Streaming Application in the Context of Automotive Manufacturing (Master Thesis Project).</a></b><br/><br/>
+				<b>
+					<a href="https://github.com/desared/Analysis-and-Prediction-on-Movies">
+						2. Analysis and Prediction on Movies (Lab Project)
+					</a>
+				</b>
+				<br/><br/>
 
-&nbsp;&nbsp;&nbsp;Data is increasingly affecting the manufacturing industry. Every second, Internet of Things devices generate large amount of sensor data. 
-Therefore, it becomes necessary to process data not only fast and efficiently, but also instantly. The digitalization of industrial production enables the 
-usage of data-driven techniques to extract insights and knowledge from large data volumes. Knowledge-discovery in the context of automotive manufacturing 
-improves the process of decision-making, enables the functionality of intelligent services, and detects occurring manufacturing anomalies. 
-However, dealing with large volumes of data at high velocity is challenging. Collecting sensor data, configuring a set of anomaly detection rules and 
-processing/analyzing data in real-time is costly and hardly maintainable. 
-<br/>
-&nbsp;&nbsp;&nbsp;In this paper, using the concepts of lambda architecture, a well-defined, efficient, and scalable technique adapted for real-time predictive 
-maintenance is implemented. On such basis an architecture, which enables both batch and stream processing at low latencies is conceptualized. To prove the 
-functionality of such a platform, a pilot anomaly detection application is developed. It covers an end-to-end framework, including data sourcing, processing, 
-transformation, model training, prediction, and visualization. On the batch layer, high volumes of complex historical datasets are analyzed. 
-Anomaly detection rules (i.e. learning models) are extracted and constantly updated to improve the analysis accuracy. On the speed layer, data is ingested and 
-analyzed instantly during the manufacturing process. A streaming engine running on the production network enables real-time prediction. <br/> <br/>
+					&nbsp;&nbsp;&nbsp;This project is worked and presented at Fraunhofer Institute under the scope of RWTH Lab. 
+					Several techniques such as multivariate regression and feature modelling are applied to predict the quality of movies. 
+					The application is built using R environment for computing and graphics.
+					The research questions addressed in this analysis are:
+				<br/>
+				    • Is there any correlation among general features that make the audience like or dislike a movie? 
+				<br/>
+				    • Analyzing a set of historical data, which variables have mostly impacted the popularity of movies in the past?
+				<br/>
+					In other words, do variables such as movie genre, MPAA rating, run length, director, etc. work as reasonable
+					predictors regarding movies popularity? Can we predict the rating of a movie (e.g. IMDB) based on these components and which variables are more impactful?
+					Predicting the movies quality ahead of their release would be a valuable metric for many critics. 
+					Moreover, companies such as Netflix perform such an analysis to predict which movies are mostly preferable in specific seasons.
+				<br/> <br/>
 
-<b><a href="https://github.com/desared/Analysis-and-Prediction-on-Movies">2. Analysis and Prediction on Movies (Lab Project)</a></b><br/><br/>
+				<b>
+					<a href="https://github.com/desared/Multiplayer-Dice-Game">
+						3. Multiplayer Dice Game (Bachelor Thesis in Computer Science)
+					</a>
+				</b>
+				<br/><br/>
 
-&nbsp;&nbsp;&nbsp;This project is worked and presented at Fraunhofer Institute under the scope of RWTH Lab. 
-Several techniques such as multivariate regression and feature modelling are applied to predict the quality of movies. 
-The application is built using R environment for computing and graphics.
-The research questions addressed in this analysis are:<br/>
-• Is there any correlation among general features that make the audience like or dislike a movie? <br/>
-• Analyzing a set of historical data, which variables have mostly impacted the popularity of movies in the past? <br/>
-In other words, do variables such as movie genre, MPAA rating, run length, director, etc. work as reasonable
-predictors regarding movies popularity? Can we predict the rating of a movie (e.g. IMDB) based on these components and which variables are more impactful?
-Predicting the movies quality ahead of their release would be a valuable metric for many critics. 
-Moreover, companies such as Netflix perform such an analysis to predict which movies are mostly preferable in specific seasons.<br/> <br/>
+				&nbsp;&nbsp;&nbsp;Dice game using advanced algorithms and probabilistic functions. I managed to present it as a senior project in Computer Science in May 2015. 
+				It is constructed and built using Java IDE. 
+				This game is a modified version of one of my favorite childhood dice games: Ludo Game. 
+				Different players compete against each other in a highly-interactive game. 
+				It can be played by anyone who is trying to spend some joyful time in the companionship of friends. 
+				Additionally, a set of specific rules (explained in the documentation) must be followed. The first player reaching the finish line is the winner. 
+				All you need is time, luck and positive attitude.  
+				<br/> <br/>
+				<b>
+					<a href="https://github.com/desared/Tour-Guide-App">
+						4. Tour Guide Mobile Application – Android Application (Bachelor Thesis in Information Systems)
+					</a>
+				</b>
+				<br/><br/>
 
-<b><a href="https://github.com/desared/Multiplayer-Dice-Game">3. Multiplayer Dice Game (Bachelor Thesis in Computer Science)</a></b><br/><br/>
+				&nbsp;&nbsp;&nbsp;Interactive Android application containing a static database of european touristic destinations. 
+				I presented it on May 2015 as a senior thesis in Information Systems. 
+				The main focus of this project is to create a tour guide application, which will help the users (mainly tourists) to choose the most appropriate place 
+				to visit in the Balkan Peninsula. Detailed information about 6 cities in the region is given. 
+				Many functionalities are unique and work independently from each other. The information is stored locally. 
+				Every button is built to do a simple task. Bright colors, photos, maps and plenty of detailed information will help the users to create a sense 
+				of continuity when travelling from one country to the other.
+				<br/><br/><br/>
 
-&nbsp;&nbsp;&nbsp;Dice game using advanced algorithms and probabilistic functions. I managed to present it as a senior project in Computer Science in May 2015. 
-It is constructed and built using Java IDE. 
-This game is a modified version of one of my favorite childhood dice games: Ludo Game. 
-Different players compete against each other in a highly-interactive game. 
-It can be played by anyone who is trying to spend some joyful time in the companionship of friends. 
-Additionally, a set of specific rules (explained in the documentation) must be followed. The first player reaching the finish line is the winner. 
-All you need is time, luck and positive attitude.  
-<br/> <br/>
-<b><a href="https://github.com/desared/Tour-Guide-App">4. Tour Guide Mobile Application – Android Application (Bachelor Thesis in Information Systems)</a></b><br/><br/>
+				<h4><em><font size="4">Papers</font></em></h4>
+				<br/><br/>
 
-&nbsp;&nbsp;&nbsp;Interactive Android application containing a static database of european touristic destinations. 
-I presented it on May 2015 as a senior thesis in Information Systems. 
-The main focus of this project is to create a tour guide application, which will help the users (mainly tourists) to choose the most appropriate place 
-to visit in the Balkan Peninsula. Detailed information about 6 cities in the region is given. 
-Many functionalities are unique and work independently from each other. The information is stored locally. 
-Every button is built to do a simple task. Bright colors, photos, maps and plenty of detailed information will help the users to create a sense 
-of continuity when travelling from one country to the other.<br/> <br/>
+				<b>
+					<a href="https://www.overleaf.com/articles/sparql-query-optimization-for-federated-linked-data/mhrfhbgmdctk#.WunR0YiFNPZ">
+						1. SPARQL Query Optimization for Federated Linked Data (Seminar Paper)
+					</a>
+				</b>
+				<br/><br/>
 
-<br/>
-<h4><em><font size="4">Papers</font></em></h4><br/><br/>
+				&nbsp;&nbsp;&nbsp;The Web has evolved from a system of internet servers supporting formatted documents into a web of linked data. 
+				In the last years, the Web of Data is constantly growing. Consequently, it has developed a large collection of interlinked data sets from multiple domains. 
+				To exploit the diversity of all available data, federated queries are needed. 
+				However, many problems such as processing power, query response time, high workload or outdated information are hindering the query processing. In this paper, 
+				I am aiming to explain various optimization techniques which have the potential to lead a significant improvement on the final query runtime.
+				I will start by briefly introducing recent approaches of federation and show why SPARQL federation endpoints are mostly in my focus. 
+				Specifically, I will compare state-of-the-art SPARQL query federation engines and analyze respective optimization approaches. The main federation engines I will analyze in terms of query optimization are FedX, DARQ and SPLENDID.
+				As the result I provide concrete examples and conclude which of the engines has the best performance based on the query execution time as key criterion.
+				<br/> <br/>
 
-<b><a href="https://www.overleaf.com/articles/sparql-query-optimization-for-federated-linked-data/mhrfhbgmdctk#.WunR0YiFNPZ">1. SPARQL Query Optimization for Federated Linked Data (Seminar Paper)</a></b><br/><br/>
-&nbsp;&nbsp;&nbsp;The Web has evolved from a system of internet servers supporting formatted documents into a web of linked data. 
-In the last years, the Web of Data is constantly growing. Consequently, it has developed a large collection of interlinked data sets from multiple domains. 
-To exploit the diversity of all available data, federated queries are needed. However, many problems such as processing power, query response time, high workload or outdated information are hindering the query processing. In this paper, I am aiming to explain various optimization techniques which have the potential to lead a significant improvement on the final query runtime. I will start by briefly introducing recent approaches of federation and show why SPARQL federation endpoints are mostly in my focus. Specifically, I will compare state-of-the-art SPARQL query federation engines and analyze respective optimization approaches. The main federation engines I will analyze in terms of query optimization are FedX, DARQ and SPLENDID. As the result I provide concrete examples and conclude which of the engines has the best performance based on the query execution time as key criterion.  <br/> <br/>
+				<b>
+					<a href="https://www.overleaf.com/articles/an-overview-of-visualization-in-mathematics-programming-and-big-data/tytdbzqvbvrh#.WunRvIiFNPZ">
+						2. An Overview of Visualization in Mathematics, Programming and Big Data (Seminar Paper)
+					</a>
+				</b>
+				<br/><br/>
 
-<b><a href="https://www.overleaf.com/articles/an-overview-of-visualization-in-mathematics-programming-and-big-data/tytdbzqvbvrh#.WunRvIiFNPZ">2. An Overview of Visualization in Mathematics, Programming and Big Data (Seminar Paper)</a></b><br/><br/>
+				&nbsp;&nbsp;&nbsp;Visualization is a descriptive way to ensure the audience attention and to make people better understand the content of a given topic.
+				Nowadays, in the world of science and technology, visualization has become a necessity.
+				However, it is a huge challenge to visualize varying amounts of data in a static or dynamic form.
+				In this paper we describe the role, value and importance of visualization in maths and science.
+				In particular, we are going to explain in details the benefits and shortages of visualization in three main domains: Mathematics, Programming and Big Data.
+				Moreover, we show the future challenges of visualization and our perspective how to better approach and face with the recent problems through technical solutions.
+				<br/> <br/>
+			</article>
+		</div>
 
-&nbsp;&nbsp;&nbsp;Visualization is a descriptive way to ensure the audience attention and to make people better understand the content of a given topic.
-Nowadays, in the world of science and technology, visualization has become a necessity.
-However, it is a huge challenge to visualize varying amounts of data in a static or dynamic form.
-In this paper we describe the role, value and importance of visualization in maths and science.
-In particular, we are going to explain in details the benefits and shortages of visualization in three main domains: Mathematics, Programming and Big Data.
-Moreover, we show the future challenges of visualization and our perspective how to better approach and face with the recent problems through technical solutions.  <br/> <br/>
-</article>
-</div>
-<footer> Address: Bernhard-Feilchenfeld-Straße 13, 50969 Köln, Germany <br/> Email: desaredosmanllari@gmail.com <br/> Tel: +49 176 57799502 <br/><br/>Copyright Desared Osmanllari &copy;<br/>
-
-
+		<!-- Footer -->
+		<footer>
+			Address: Bernhard-Feilchenfeld-Straße 13, 50969 Köln, Germany
+			<br/>
+			Email: desaredosmanllari@gmail.com
+			<br/> 
+			Tel: +49 176 57799502
+			<br/><br/>
+			Copyright Desared Osmanllari &copy;
+			<br/>
+		</footer>
 	</body>
 </html>

@@ -27,7 +27,6 @@ a:hover {
    
     color: #A3A3A3;  
     text-transform: uppercase;
-    /*text-align: left;*/
     width: 740px;
     min-height: 45px;
     margin: 0px auto;
@@ -63,7 +62,6 @@ a{
     background-color: #629DA1;
     padding-top: 30px;
     padding-bottom: 30px;
-    /*margin-top: 100px;*/
     margin-top:  100px;
     width: 100%;
     font-size: 30px;
