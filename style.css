@@ -1,12 +1,14 @@
+html {
+    min-height: 100%;
+}
+
 body{
     text-shadow: none;
     color: #FFF;
-    
-    background-color: #071338;
     text-align: center;
     font-family: "Open Sans",Arial,Helvetica,sans-serif;
-	margin:0;
- 
+    margin:0;
+    min-height: 100%;
 }
 .navigation{
     font-size: 14px;
@@ -116,10 +118,19 @@ audio{
 }
 
 footer{
-    margin: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #071338;
+    height: 8rem;
+}
+
+@media (min-width: 1024px) {
+    footer {
+        position: relative;
+    }
 }
 
 iframe{
     border: none;
 }
-
