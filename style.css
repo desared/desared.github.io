@@ -118,7 +118,7 @@ audio{
 }
 
 footer{
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
     background-color: #071338;
