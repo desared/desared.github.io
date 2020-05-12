@@ -125,11 +125,6 @@ footer{
     height: 11rem;
 }
 
-@media (min-width: 1024px) {
-    footer {
-        position: relative;
-    }
-}
 
 iframe{
     border: none;
