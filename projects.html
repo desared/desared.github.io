@@ -54,16 +54,38 @@
 				</h4>
 
 				<br/><br>
-				
-				
+
 				<b>
-					<a href="https://github.com/desared/Arvato-Bertelsmann-Customer-Acquisition">
-						1. Customer Segmentation Report for Arvato Financial Services (Udacity Capstone Project).
+					<a href="https://github.com/desared/Deploying-ML-Model-Heroku-FastAPI">
+						1. Machine Learning Model Deployment using Heroku and FastAPI.
 					</a>
 				</b>
 				<br/><br/>
 				
-					&nbsp;&nbsp;&nbsp;This project is worked under the scope of Machine Learning Engineer Nanodegree offered by Udacity. Data is provided by Bertelsmann Arvato Analytics. 
+					&nbsp;&nbsp;&nbsp;In this project, a classification model is developed on publicly available Census Bureau data. 
+					A remote DVC (Data Version Control) is pointing to AWS S3 bucket. DVC is used as a data versioning tool. It keeps track of the data workflow 
+					and can be used as an experiment management tool as well. 
+					To classify the data samples, Random Forest is selected. Additionally, K Fold cross validation is used as a resampling technique
+					to evaluate machine learning models on a limited data sample.
+
+				<br/>
+					&nbsp;&nbsp;&nbsp;
+					In order to monitor the model performance on various data slices, several unit tests are created. 
+					The model API is served using the FastAPI package. 
+					Both the slice-validation and the API tests are incorporated into a CI/CD framework using GitHub Actions.
+					Heroku is used for API deployment. A Heroku app will be deployed from Github repository. Automatic deployments will be enabled only if continuous integration is passed.
+					Flake8 is used as a python linter for style checking. 
+				<br/><br/>
+								
+				
+				<b>
+					<a href="https://github.com/desared/Arvato-Bertelsmann-Customer-Acquisition">
+						2. Customer Segmentation Report for Arvato Financial Services.
+					</a>
+				</b>
+				<br/><br/>
+				
+					&nbsp;&nbsp;&nbsp;This project is worked as a capstone project for the Machine Learning Engineer Nanodegree offered by Udacity. Data is provided by Bertelsmann Arvato Analytics. 
 				Supervised and unsupervised learning techniques are used to analyze demographics data for customers of a mail-order company (Arvato Financial Solutions) in Germany against demographics information of their existing clients. 
 				The main goal of this project is to identify the right people, who can be potential future customers.
 				<br/>
@@ -74,7 +96,7 @@ Several ensemble methods are used to build the model, while Grid Search is used 
 				
 				<b>
 					<a href="https://github.com/desared/ProcessMonitoring">
-						2. Conceptualization and Development of a Predictive Big Data Streaming Application in the Context of Automotive Manufacturing (Master Thesis Project).
+						3. Conceptualization and Development of a Predictive Big Data Streaming Application in the Context of Automotive Manufacturing (Master Thesis Project).
 					</a>
 				</b>
 				<br/><br/>
@@ -96,54 +118,53 @@ Several ensemble methods are used to build the model, while Grid Search is used 
 
 				<b>
 					<a href="https://github.com/desared/Analysis-and-Prediction-on-Movies">
-						3. Analysis and Prediction on Movies (Lab Project)
+						4. Analysis and Prediction on Movies
 					</a>
 				</b>
 				<br/><br/>
 
-					&nbsp;&nbsp;&nbsp;This project is worked and presented at Fraunhofer Institute under the scope of RWTH Lab. 
-					Several techniques such as multivariate regression and feature modelling are applied to predict the quality of movies. 
-					The application is built using R environment for computing and graphics.
+					&nbsp;&nbsp;&nbsp;This project is worked and presented at Fraunhofer Institute, as part of RWTH Lab. 
+					Several techniques such as multivariate regression and feature modelling are applied to predict movie ratings. 
+					The application is built in R environment for computing and graphics.
 					The research questions addressed in this analysis are:
 				<br/>
 				    • Is there any correlation among general features that make the audience like or dislike a movie? 
 				<br/>
-				    • Analyzing a set of historical data, which variables have mostly impacted the popularity of movies in the past?
+				    • Analyzing a set of historical data, which attributes have mostly impacted the popularity of movies in the past?
 				<br/>
-					&nbsp;&nbsp;&nbsp;In other words, do variables such as movie genre, MPAA rating, run length, director, etc. work as reasonable
-					predictors regarding movies popularity? Can we predict the rating of a movie (e.g. IMDB) based on these components and which variables are more impactful?
-					Predicting the movies quality ahead of their release would be a valuable metric for many critics. 
-					Moreover, companies such as Netflix perform such an analysis to predict which movies are mostly preferable in specific seasons.
+					• May we predict the IMDB rating of a movie based on its genre, MPAA rating, run length, director, etc and which variables are more impactful?
+
+				<br/>
+					&nbsp;&nbsp;&nbsp;Predicting the movies quality ahead of their release would be a valuable metric for many critics. 
+					Companies as Netflix perform such an kind of analysis to predict the success of upcoming movie releases.
 				<br/> <br/>
 
 				<b>
 					<a href="https://github.com/desared/Multiplayer-Dice-Game">
-						4. Multiplayer Dice Game (Bachelor Thesis in Computer Science)
+						5. Multiplayer Dice Game 
 					</a>
 				</b>
 				<br/><br/>
 
-				&nbsp;&nbsp;&nbsp;Dice game using advanced algorithms and probabilistic functions. I managed to present it as a senior project in Computer Science in May 2015. 
-				It is constructed and built using Java IDE. 
-				This game is a modified version of one of my favorite childhood dice games: Ludo Game. 
-				Different players compete against each other in a highly-interactive game. 
-				It can be played by anyone who is trying to spend some joyful time in the companionship of friends. 
-				Additionally, a set of specific rules (explained in the documentation) must be followed. The first player reaching the finish line is the winner. 
+				&nbsp;&nbsp;&nbsp;Dice game using advanced algorithms and probabilistic functions. It is presented as a bachelor thesis in Computer Science. 
+				This project is built in Java. It is a modified version of one of my favorite dice games, Ludo. 
+				Different players compete against each other in a highly-interactive playground. 
+				A set of specific rules (explained in the documentation) should be followed. The first player reaching the finish line is the winner. 
 				All you need is time, luck and positive attitude.  
 				<br/> <br/>
 				<b>
 					<a href="https://github.com/desared/Tour-Guide-App">
-						5. Tour Guide Mobile Application – Android Application (Bachelor Thesis in Information Systems)
+						6. Tour Guide Mobile Application – Android Application 
 					</a>
 				</b>
 				<br/><br/>
 
 				&nbsp;&nbsp;&nbsp;Interactive Android application containing a static database of european touristic destinations. 
-				I presented it on May 2015 as a senior thesis in Information Systems. 
-				The main focus of this project is to create a tour guide application, which will help the users (mainly tourists) to choose the most appropriate place 
-				to visit in the Balkan Peninsula. Detailed information about 6 cities in the region is given. 
+				It is presented as a bachelor thesis in Information Systems. 
+				The main focus of this project is to create a tour guide application, which will help the tourists to select their favorite balkan destination. 
+				Detailed information about 6 cities in the region is given. 
 				Many functionalities are unique and work independently from each other. The information is stored locally. 
-				Every button is built to do a simple task. Bright colors, photos, maps and plenty of detailed information will help the users to create a sense 
+				Bright colors, photos, maps and plenty of detailed information will help the users to create a sense 
 				of continuity when travelling from one country to the other.
 				<br/><br/><br/>
 
@@ -152,7 +173,7 @@ Several ensemble methods are used to build the model, while Grid Search is used 
 
 				<b>
 					<a href="https://www.overleaf.com/articles/sparql-query-optimization-for-federated-linked-data/mhrfhbgmdctk#.WunR0YiFNPZ">
-						1. SPARQL Query Optimization for Federated Linked Data (Seminar Paper)
+						1. SPARQL Query Optimization for Federated Linked Data 
 					</a>
 				</b>
 				<br/><br/>
@@ -169,7 +190,7 @@ Several ensemble methods are used to build the model, while Grid Search is used 
 
 				<b>
 					<a href="https://www.overleaf.com/articles/an-overview-of-visualization-in-mathematics-programming-and-big-data/tytdbzqvbvrh#.WunRvIiFNPZ">
-						2. An Overview of Visualization in Mathematics, Programming and Big Data (Seminar Paper)
+						2. An Overview of Visualization in Mathematics, Programming and Big Data 
 					</a>
 				</b>
 				<br/><br/>
