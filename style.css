@@ -95,12 +95,15 @@ audio{
 	margin-left: 200px;
 }
 footer{
-	position: absolute;
+	position: relative;
 	width: 100%;
 	bottom: 0;
 	background-color: #071338;
-	height: 11rem;
+ 	height: 11rem;
+
+
 }
+
 @media (min-width: 1024px) {
 	footer {
 		position: relative;
