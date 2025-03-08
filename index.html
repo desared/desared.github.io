@@ -92,7 +92,7 @@
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+								<a  class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 								<h3><a href="https://github.com/desared/Deploying-ML-Model-Heroku-FastAPI">MLOPS</a></h3>
 								<p>Machine Learning Model Deployment using Heroku and FastAPI.</p>
 							</article>
@@ -106,28 +106,28 @@
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.png" alt="" /></a>
+								<a  class="image featured"><img src="images/pic03.png" alt="" /></a>
 								<h3><a href="https://github.com/desared/ProcessMonitoring">Master Thesis Project</a></h3>
 								<p>Conceptualization and Development of a Predictive Big Data Streaming Application in the Context of Automotive Manufacturing.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic04.png" alt="" /></a>
+								<a  class="image featured"><img src="images/pic04.png" alt="" /></a>
 								<h3><a href="https://github.com/desared/Analysis-and-Prediction-on-Movies">RWTH Lab Project</a></h3>
 								<p>Modelling and Prediction for Movie Ratings.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic05.png" alt="" /></a>
+								<a  class="image featured"><img src="images/pic05.png" alt="" /></a>
 								<h3><a href="https://www.overleaf.com/articles/sparql-query-optimization-for-federated-linked-data/mhrfhbgmdctk#.WunR0YiFNPZ">Seminar Paper</a></h3>
 								<p>SPARQL Query Optimization for Federated Linked Data.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic06.png" alt="" /></a>
+								<a  class="image featured"><img src="images/pic06.png" alt="" /></a>
 								<h3><a href="https://www.overleaf.com/articles/an-overview-of-visualization-in-mathematics-programming-and-big-data/tytdbzqvbvrh#.WunRvIiFNPZ">Seminar Paper</a></h3>
 								<p>An Overview of Visualization in Mathematics, Programming and Big Data.</p>
 							</article>
@@ -160,19 +160,48 @@
 							<section class="box style1">
 								<span class="icon solid featured fa fa-server"></span>
 								<h3>Tech Stack</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+								<p>
+														<ul class="custom-list">
+						<li>Programming: Python, R, SQL.</li>
+						<li>Could-based: GCP, Databricks.</li>
+						<li>Frameworks: Tensorflow, Keras.</li>
+					</ul>
+
+					<style>
+						.custom-list {
+							list-style-type: "✔ "; /* Custom bullet point */
+							padding-left: 20px;
+						}
+					</style>
+								</p>
 							</section>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
 								<span class="icon solid featured fa fa-language"></span>
 								<h3>Languages</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+								<p>
+									<ul style="list-style: none; padding: 20;">
+										<li style="display: flex; align-items: center; gap: 10px;">
+											<img src="images/al.png" alt="Albanian Flag" width="20">
+											<span>Native Speaker</span>
+										</li>
+										<li style="display: flex; align-items: center; gap: 10px;">
+											<img src="images/en.png" alt="English Flag" width="20">
+											<span>Full Proficiency</span>
+										</li>
+										<li style="display: flex; align-items: center; gap: 10px;">
+											<img src="images/gr.png" alt="Greek Flag" width="20">
+											<span>Working Proficiency</span>
+										</li>
+									</ul>
+								</p>
 							</section>
 						</div>
 					</div>
 					<footer>
-						<p>Beyond The Numbers: Travel enthusiast discovering unique cultures</p>
+					<p>Beyond The Numbers:</p>
+
 						<a href="#contact" class="button large scrolly">Get in touch with me</a>
 					</footer>
 				</div>
@@ -185,13 +214,46 @@
 						<h2>Let's collaborate!</h2>
 					</header>
                     <!-- Article Container -->
-                    <div class="articlecontainerbg">
-                        <article>
-                            <iframe src="https://docs.google.com/forms/d/1Dlr5gpjpIM1_RQZegy9q7LR-4ZXB7UeHvBZosqa8nxg/viewform?usp=send_form" width="680" height="1730">
-                                    Loading...
-                            </iframe>
-                        </article>
-                    </div>
+					<div class="articlecontainerbg">
+						<article>
+							<div class="form-container">
+								<iframe src="https://docs.google.com/forms/d/1Dlr5gpjpIM1_RQZegy9q7LR-4ZXB7UeHvBZosqa8nxg/viewform?usp=send_form" allowfullscreen></iframe>
+							</div>
+						</article>
+					</div>
+
+					<style>
+						.form-container {
+							position: relative;
+							width: 100%;
+							max-width: 680px; /* Limit width on larger screens */
+							margin: 0 auto; /* Center the form */
+						}
+
+						.form-container iframe {
+							width: 100%;
+							height: 1730px; /* Default height for desktop */
+							border: none;
+						}
+
+						@media (max-width: 1024px) {
+							.form-container iframe {
+								height: 1500px; /* Slightly smaller height on tablets */
+							}
+						}
+
+						@media (max-width: 768px) {
+							.form-container iframe {
+								height: 1200px; /* Reduce height on mobile */
+							}
+						}
+
+						@media (max-width: 480px) {
+							.form-container iframe {
+								height: 1000px; /* Even smaller height for very small screens */
+							}
+						}
+					</style>
 <!--					<div class="row">-->
 <!--						<div class="col-12">-->
 <!--							<form method="post" action="#">-->
