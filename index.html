@@ -21,7 +21,6 @@
 		<!-- Nav -->
 			<nav id="nav">
 				<ul class="container">
-					<li><b><a href="#top">↑</a></b></li>
 					<li><a href="#profile">About Me</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
 					<li><a href="#skills">Skills</a></li>
@@ -299,6 +298,59 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<!-- Scroll to Top Button -->
+		<a href="#top" id="scrollToTop" title="Go to top">↑</a>
+
+		<style>
+			#scrollToTop {
+				display: none;
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				z-index: 99;
+				border: none;
+				outline: none;
+				background-color: #4a90e2;
+				color: white;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 50%;
+				font-size: 18px;
+				width: 50px;
+				height: 50px;
+				transition: opacity 0.3s;
+				text-decoration: none;
+				text-align: center;
+				line-height: 20px;
+			}
+
+			#scrollToTop:hover {
+				background-color: #357abd;
+			}
+		</style>
+
+		<script>
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("scrollToTop").style.display = "block";
+				} else {
+					document.getElementById("scrollToTop").style.display = "none";
+				}
+			}
+
+			// Add click event listener to the scroll-to-top button
+			document.getElementById("scrollToTop").addEventListener("click", function(e) {
+				e.preventDefault();
+				window.scrollTo({
+					top: 0,
+					behavior: "smooth"
+				});
+			});
+		</script>
 
 	</body>
 </html>
