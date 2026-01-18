@@ -40,7 +40,19 @@ document.getElementById('contactForm').addEventListener('submit', async function
 			subject: subject,
 			message: message,
 			timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-			read: false // Flag to track if you've read the message
+			read: false, // Flag to track if you've read the message
+			// Email notification fields (for Firebase Trigger Email extension)
+			to: 'your-email@example.com', // Replace with your email
+			replyTo: email,
+			template: {
+				name: 'contactForm',
+				data: {
+					senderName: name,
+					senderEmail: email,
+					subject: subject,
+					messageBody: message
+				}
+			}
 		});
 
 		// Show success message
