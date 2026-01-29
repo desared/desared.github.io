@@ -48,15 +48,24 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
 		// Send to webhook for email notification (optional)
 		if (WEBHOOK_URL) {
-			const webhookData = new URLSearchParams({
-				name: name,
-				email: email,
-				subject: subject,
-				message: message,
-				timestamp: new Date().toISOString()
-			});
-			const img = new Image();
-			img.src = WEBHOOK_URL + '?' + webhookData.toString();
+			try {
+				await fetch(WEBHOOK_URL, {
+					method: 'POST',
+					mode: 'no-cors',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						name: name,
+						email: email,
+						subject: subject,
+						message: message,
+						timestamp: new Date().toISOString()
+					})
+				});
+			} catch (webhookError) {
+				console.log('Webhook notification sent (or blocked by CORS)');
+			}
 		}
 
 		// Show success message
