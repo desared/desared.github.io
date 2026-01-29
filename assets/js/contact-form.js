@@ -1,6 +1,6 @@
 // Contact Form Handler
 // Optional: Webhook URL for notifications (Make.com, etc.)
-const WEBHOOK_URL = ''; // Add webhook URL here if needed
+const WEBHOOK_URL = 'https://hook.eu1.make.com/4vya511bc75b65marhp426kddal30l7u';
 
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
 	e.preventDefault();
