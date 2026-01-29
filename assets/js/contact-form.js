@@ -1,6 +1,6 @@
 // Contact Form Handler
-// Zapier Webhook URL - Replace with your actual webhook URL from Zapier
-const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/26099749/ultufzd/'; // Add your Zapier webhook URL here (leave empty to disable)
+// Optional: Webhook URL for notifications (Make.com, etc.)
+const WEBHOOK_URL = ''; // Add webhook URL here if needed
 
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
 	e.preventDefault();
@@ -46,9 +46,8 @@ document.getElementById('contactForm').addEventListener('submit', async function
 			read: false
 		});
 
-		// Send to Zapier Webhook for email notification (no polling required!)
-		if (ZAPIER_WEBHOOK_URL) {
-			// Use URL params approach which works better with CORS
+		// Send to webhook for email notification (optional)
+		if (WEBHOOK_URL) {
 			const webhookData = new URLSearchParams({
 				name: name,
 				email: email,
@@ -56,10 +55,8 @@ document.getElementById('contactForm').addEventListener('submit', async function
 				message: message,
 				timestamp: new Date().toISOString()
 			});
-
-			// Create a hidden image to send the request (bypasses CORS)
 			const img = new Image();
-			img.src = ZAPIER_WEBHOOK_URL + '?' + webhookData.toString();
+			img.src = WEBHOOK_URL + '?' + webhookData.toString();
 		}
 
 		// Show success message
