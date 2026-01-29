@@ -49,19 +49,17 @@ document.getElementById('contactForm').addEventListener('submit', async function
 		// Send to webhook for email notification (optional)
 		if (WEBHOOK_URL) {
 			try {
+				const formData = new URLSearchParams();
+				formData.append('name', name);
+				formData.append('email', email);
+				formData.append('subject', subject);
+				formData.append('message', message);
+				formData.append('timestamp', new Date().toISOString());
+
 				await fetch(WEBHOOK_URL, {
 					method: 'POST',
 					mode: 'no-cors',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({
-						name: name,
-						email: email,
-						subject: subject,
-						message: message,
-						timestamp: new Date().toISOString()
-					})
+					body: formData
 				});
 			} catch (webhookError) {
 				console.log('Webhook notification sent (or blocked by CORS)');
