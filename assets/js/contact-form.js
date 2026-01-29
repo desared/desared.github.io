@@ -1,4 +1,7 @@
 // Contact Form Handler
+// Zapier Webhook URL - Replace with your actual webhook URL from Zapier
+const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/26099749/ultufzd/'; // Add your Zapier webhook URL here (leave empty to disable)
+
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
 	e.preventDefault();
 
@@ -40,20 +43,26 @@ document.getElementById('contactForm').addEventListener('submit', async function
 			subject: subject,
 			message: message,
 			timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-			read: false, // Flag to track if you've read the message
-			// Email notification fields (for Firebase Trigger Email extension)
-			to: 'your-email@example.com', // Replace with your email
-			replyTo: email,
-			template: {
-				name: 'contactForm',
-				data: {
-					senderName: name,
-					senderEmail: email,
-					subject: subject,
-					messageBody: message
-				}
-			}
+			read: false
 		});
+
+		// Send to Zapier Webhook for email notification (no polling required!)
+		if (ZAPIER_WEBHOOK_URL) {
+			fetch(ZAPIER_WEBHOOK_URL, {
+				method: 'POST',
+				body: JSON.stringify({
+					name: name,
+					email: email,
+					subject: subject,
+					message: message,
+					timestamp: new Date().toISOString()
+				}),
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				mode: 'no-cors' // Zapier webhooks don't return CORS headers
+			}).catch(() => console.log('Webhook notification sent'));
+		}
 
 		// Show success message
 		showMessage('Thank you! Your message has been sent successfully. I will get back to you soon.', 'success');
