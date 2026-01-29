@@ -48,20 +48,18 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
 		// Send to Zapier Webhook for email notification (no polling required!)
 		if (ZAPIER_WEBHOOK_URL) {
-			fetch(ZAPIER_WEBHOOK_URL, {
-				method: 'POST',
-				body: JSON.stringify({
-					name: name,
-					email: email,
-					subject: subject,
-					message: message,
-					timestamp: new Date().toISOString()
-				}),
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				mode: 'no-cors' // Zapier webhooks don't return CORS headers
-			}).catch(() => console.log('Webhook notification sent'));
+			// Use URL params approach which works better with CORS
+			const webhookData = new URLSearchParams({
+				name: name,
+				email: email,
+				subject: subject,
+				message: message,
+				timestamp: new Date().toISOString()
+			});
+
+			// Create a hidden image to send the request (bypasses CORS)
+			const img = new Image();
+			img.src = ZAPIER_WEBHOOK_URL + '?' + webhookData.toString();
 		}
 
 		// Show success message
