@@ -208,10 +208,255 @@
 
 				#top h1 {
 					font-size: 1.85em;
+					line-height: 1.2;
 				}
 
 				.section-intro {
 					font-size: 1.1em;
+				}
+
+				.hero-description {
+					font-size: 1em;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				#top h1 {
+					font-size: 1.5em;
+					line-height: 1.3;
+					word-wrap: break-word;
+				}
+
+				#top h1 strong {
+					display: block;
+					font-size: 1.1em;
+					margin-top: 0.2em;
+				}
+
+				.hero-subtitle {
+					font-size: 1em;
+				}
+
+				.hero-description {
+					font-size: 0.95em;
+					line-height: 1.6em;
+				}
+
+				.button.large {
+					font-size: 1em;
+					padding: 1em 2em;
+				}
+			}
+
+			@media screen and (max-width: 360px) {
+				#top h1 {
+					font-size: 1.3em;
+				}
+
+				#top h1 strong {
+					font-size: 1em;
+				}
+
+				.hero-subtitle {
+					font-size: 0.9em;
+				}
+			}
+
+			/* Invited Talks Section */
+			.box.style-talk {
+				background: #fff;
+				border-radius: 12px;
+				overflow: hidden;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.box.style-talk:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+			}
+
+			.box.style-talk .talk-image {
+				width: 100%;
+				overflow: hidden;
+			}
+
+			.box.style-talk .talk-image img {
+				width: 100%;
+				height: auto;
+				display: block;
+				transition: transform 0.4s ease;
+			}
+
+			.box.style-talk:hover .talk-image img {
+				transform: scale(1.02);
+			}
+
+			.box.style-talk .talk-content {
+				padding: 2em;
+			}
+
+			.box.style-talk h3 {
+				color: #2c3e50;
+				font-size: 1.5em;
+				margin-bottom: 0.5em;
+			}
+
+			.box.style-talk .talk-date {
+				color: #43B3E0;
+				font-weight: 600;
+				margin-bottom: 0.5em;
+			}
+
+			.box.style-talk .talk-date i,
+			.box.style-talk .talk-topic i,
+			.box.style-talk .talk-organizer i {
+				margin-right: 0.5em;
+				width: 1.2em;
+				color: #43B3E0;
+			}
+
+			.box.style-talk .talk-topic {
+				color: #555;
+				font-weight: 500;
+				margin-bottom: 1em;
+			}
+
+			.box.style-talk .talk-description {
+				color: #666;
+				line-height: 1.7em;
+				margin-bottom: 1em;
+			}
+
+			.box.style-talk .talk-organizer {
+				color: #888;
+				font-size: 0.9em;
+				margin-bottom: 0;
+			}
+
+			@media screen and (max-width: 736px) {
+				.box.style-talk .talk-content {
+					padding: 1.5em;
+				}
+
+				.box.style-talk h3 {
+					font-size: 1.25em;
+				}
+			}
+
+			/* Language Dropdown */
+			.lang-dropdown {
+				position: relative;
+				margin-left: 20px;
+			}
+
+			.lang-dropdown-btn {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				background: rgba(255, 255, 255, 0.1);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				color: #fff;
+				padding: 6px 12px;
+				border-radius: 6px;
+				cursor: pointer;
+				font-size: 0.85em;
+				font-weight: 600;
+				transition: all 0.3s ease;
+			}
+
+			.lang-dropdown-btn:hover {
+				background: rgba(255, 255, 255, 0.15);
+				border-color: rgba(255, 255, 255, 0.3);
+			}
+
+			.lang-dropdown-btn .flag {
+				font-size: 1.1em;
+			}
+
+			.lang-dropdown-btn .arrow {
+				font-size: 0.7em;
+				transition: transform 0.3s ease;
+			}
+
+			.lang-dropdown.open .lang-dropdown-btn .arrow {
+				transform: rotate(180deg);
+			}
+
+			.lang-dropdown-menu {
+				position: absolute;
+				top: calc(100% + 8px);
+				right: 0;
+				background: #2a2a2a;
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				border-radius: 8px;
+				min-width: 140px;
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+				opacity: 0;
+				visibility: hidden;
+				transform: translateY(-10px);
+				transition: all 0.3s ease;
+				z-index: 1000;
+				overflow: hidden;
+			}
+
+			.lang-dropdown.open .lang-dropdown-menu {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
+
+			.lang-option {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				padding: 10px 14px;
+				color: rgba(255, 255, 255, 0.8);
+				cursor: pointer;
+				transition: all 0.2s ease;
+				font-size: 0.9em;
+			}
+
+			.lang-option:hover {
+				background: rgba(67, 179, 224, 0.2);
+				color: #fff;
+			}
+
+			.lang-option.active {
+				background: rgba(67, 179, 224, 0.15);
+				color: #43B3E0;
+			}
+
+			.lang-option .flag {
+				font-size: 1.2em;
+			}
+
+			@media screen and (max-width: 736px) {
+				.lang-dropdown {
+					margin-left: 0;
+					margin-top: 10px;
+				}
+
+				#nav a {
+					font-size: 0.85em;
+					letter-spacing: 0.02em;
+				}
+
+				.lang-dropdown-menu {
+					right: auto;
+					left: 50%;
+					transform: translateX(-50%) translateY(-10px);
+				}
+
+				.lang-dropdown.open .lang-dropdown-menu {
+					transform: translateX(-50%) translateY(0);
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				.lang-dropdown-btn {
+					padding: 5px 10px;
+					font-size: 0.8em;
 				}
 			}
 		</style>
@@ -222,10 +467,28 @@
 		<!-- Nav -->
 			<nav id="nav">
 				<ul class="container">
-					<li><a href="#profile">About Me</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#skills">Skills</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#profile" data-en="About Me" data-de="Über mich">About Me</a></li>
+					<li><a href="#portfolio" data-en="Portfolio" data-de="Portfolio">Portfolio</a></li>
+					<li><a href="#talks" data-en="Talks" data-de="Vorträge">Talks</a></li>
+					<li><a href="#skills" data-en="Skills" data-de="Kompetenzen">Skills</a></li>
+					<li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
+					<li class="lang-dropdown" id="langDropdown">
+						<button class="lang-dropdown-btn" id="langDropdownBtn">
+							<span class="flag" id="currentFlag">🇬🇧</span>
+							<span id="currentLang">EN</span>
+							<span class="arrow">▼</span>
+						</button>
+						<div class="lang-dropdown-menu">
+							<div class="lang-option active" data-lang="en">
+								<span class="flag">🇬🇧</span>
+								<span>English</span>
+							</div>
+							<div class="lang-option" data-lang="de">
+								<span class="flag">🇩🇪</span>
+								<span>Deutsch</span>
+							</div>
+						</div>
+					</li>
 				</ul>
 			</nav>
 
@@ -238,11 +501,11 @@
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
-								<h1>Hi, I'm <strong>Desared Osmanllari</strong></h1>
+								<h1><span data-en="Hi, I'm" data-de="Hallo, ich bin">Hi, I'm</span> <strong>Desared Osmanllari</strong></h1>
 							</header>
-							<p class="hero-subtitle">Data Scientist & Machine Learning Engineer</p>
-							<p class="hero-description">Passionate Data Scientist with over 7 years of experience specialising in data-driven application development and machine learning.</p>
-							<a href="#profile" class="button large scrolly">View My Work</a>
+							<p class="hero-subtitle" data-en="Data Scientist & Machine Learning Engineer" data-de="Data Scientist & Machine Learning Engineer">Data Scientist & Machine Learning Engineer</p>
+							<p class="hero-description" data-en="Passionate Data Scientist with over 7 years of experience specialising in data-driven application development and machine learning." data-de="Leidenschaftlicher Data Scientist mit über 7 Jahren Erfahrung in datengetriebener Anwendungsentwicklung und maschinellem Lernen.">Passionate Data Scientist with over 7 years of experience specialising in data-driven application development and machine learning.</p>
+							<a href="#profile" class="button large scrolly" data-en="View My Work" data-de="Zu meinen Projekten">View My Work</a>
 						</div>
 					</div>
 				</div>
@@ -252,35 +515,35 @@
 			<article id="profile" class="wrapper style2">
 				<div class="container">
 					<header>
-						<h2>About Me</h2>
-						<p class="section-intro">My current role centers on enhancing customer acquisition processes, improving conversion rates, and optimizing budget allocation; all while nurturing a passion for technological innovation and operational excellence.</p>
+						<h2 data-en="About Me" data-de="Über mich">About Me</h2>
+						<p class="section-intro" data-en="My current role centers on enhancing customer acquisition processes, improving conversion rates, and optimizing budget allocation; all while nurturing a passion for technological innovation and operational excellence." data-de="In meiner aktuellen Position optimiere ich Kundenakquisitionsprozesse, steigere Conversion-Raten und verbessere die Budgetallokation – stets getrieben von einer Leidenschaft für technologische Innovation und operative Exzellenz.">My current role centers on enhancing customer acquisition processes, improving conversion rates, and optimizing budget allocation; all while nurturing a passion for technological innovation and operational excellence.</p>
 					</header>
 					<div class="row aln-center">
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
 								<span class="icon solid featured fa fa-search-plus"></span>
-								<h3>Data Science Expert</h3>
-								<p>Senior Data Scientist at Sonova Digital</p>
+								<h3 data-en="Data Science Expert" data-de="Data Science Experte">Data Science Expert</h3>
+								<p data-en="Senior Data Scientist at Sonova Digital" data-de="Senior Data Scientist bei Sonova Digital">Senior Data Scientist at Sonova Digital</p>
 							</section>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
 								<span class="icon solid featured fa fa-graduation-cap"></span>
-								<h3>Education</h3>
-								<p>MSc in Software Systems Engineering from RWTH Aachen University</p>
+								<h3 data-en="Education" data-de="Bildung">Education</h3>
+								<p data-en="MSc in Software Systems Engineering from RWTH Aachen University" data-de="MSc in Software Systems Engineering, RWTH Aachen University">MSc in Software Systems Engineering from RWTH Aachen University</p>
 							</section>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
 								<span class="icon solid featured fa fa-cloud"></span>
-								<h3>ML Engineer</h3>
-								<p>Certified Machine Learning Engineer</p>
+								<h3 data-en="ML Engineer" data-de="ML Engineer">ML Engineer</h3>
+								<p data-en="Certified Machine Learning Engineer" data-de="Zertifizierter Machine Learning Engineer">Certified Machine Learning Engineer</p>
 							</section>
 						</div>
 
 					</div>
 					<footer>
-						<a href="#portfolio" class="button large scrolly">Explore My Projects</a>
+						<a href="#portfolio" class="button large scrolly" data-en="Explore My Projects" data-de="Projekte entdecken">Explore My Projects</a>
 					</footer>
 				</div>
 			</article>
@@ -289,72 +552,106 @@
 			<article id="portfolio" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>Featured Projects</h2>
-						<p class="section-intro">A selection of academic research and open-source machine learning projects demonstrating end-to-end ML solutions.</p>
+						<h2 data-en="Featured Projects" data-de="Ausgewählte Projekte">Featured Projects</h2>
+						<p class="section-intro" data-en="A selection of academic research and open-source machine learning projects demonstrating end-to-end ML solutions." data-de="Eine Auswahl akademischer Forschungs- und Open-Source Machine Learning Projekte mit End-to-End ML-Lösungen.">A selection of academic research and open-source machine learning projects demonstrating end-to-end ML solutions.</p>
 					</header>
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
+								<a href="images/clawd.gif" target="_blank" class="image featured"><img src="images/clawd_bot.jpg" alt="ClawdBot AI Assistant" /></a>
+								<h3><a href="images/clawd.gif" target="_blank" data-en="AI Personal Assistant" data-de="KI-Assistent">AI Personal Assistant</a></h3>
+								<p data-en="24/7 AI assistant with Calendar, Web Search & Telegram integration." data-de="24/7-KI-Assistent mit Kalender-, Websuche- und Telegram-Integration.">24/7 AI assistant with Calendar, Web Search & Telegram integration.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
 								<a  class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 								<h3><a href="https://github.com/desared/Deploying-ML-Model-Heroku-FastAPI" target="_blank">MLOPS</a></h3>
-								<p>Machine Learning Model Deployment using Heroku and FastAPI.</p>
+								<p data-en="Machine Learning Model Deployment using Heroku and FastAPI." data-de="Machine Learning Modell-Deployment mit Heroku und FastAPI.">Machine Learning Model Deployment using Heroku and FastAPI.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="https://github.com/desared/Arvato-Bertelsmann-Customer-Acquisition" target="_blank">Customer Segmentation</a></h3>
-								<p>Customer Segmentation Report for Arvato Financial Services.</p>
+								<h3><a href="https://github.com/desared/Arvato-Bertelsmann-Customer-Acquisition" target="_blank" data-en="Customer Segmentation" data-de="Kundensegmentierung">Customer Segmentation</a></h3>
+								<p data-en="Customer Segmentation Report for Arvato Financial Services." data-de="Kundensegmentierungsbericht für Arvato Financial Services.">Customer Segmentation Report for Arvato Financial Services.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a  class="image featured"><img src="images/pic03.png" alt="" /></a>
-								<h3><a href="https://github.com/desared/Dynamic-Risk-Assessment-System" target="_blank">Risk Assessment</a></h3>
-								<p>Create, deploy, and monitor a dynamic risk assessment system.</p>
+								<h3><a href="https://github.com/desared/Dynamic-Risk-Assessment-System" target="_blank" data-en="Risk Assessment" data-de="Risikobewertung">Risk Assessment</a></h3>
+								<p data-en="Create, deploy, and monitor a dynamic risk assessment system." data-de="Entwicklung, Bereitstellung und Monitoring eines dynamischen Risikobewertungssystems.">Create, deploy, and monitor a dynamic risk assessment system.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a  class="image featured"><img src="images/pic06.png" alt="" /></a>
 								<h3><a href="https://github.com/desared/ML-pipeline-rental-prices" target="_blank">ML Pipeline</a></h3>
-								<p>ML Pipeline for Short-Term Rental Prices in NYC.</p>
+								<p data-en="ML Pipeline for Short-Term Rental Prices in NYC." data-de="ML-Pipeline zur Preisvorhersage für Kurzzeitvermietungen in NYC.">ML Pipeline for Short-Term Rental Prices in NYC.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a  class="image featured"><img src="images/pic04.png" alt="" /></a>
-								<h3><a href="https://github.com/desared/Analysis-and-Prediction-on-Movies" target="_blank">Lab Project</a></h3>
-								<p>Modelling and Prediction for Movie Ratings.</p>
+								<h3><a href="https://github.com/desared/Analysis-and-Prediction-on-Movies" target="_blank" data-en="Lab Project" data-de="Laborprojekt">Lab Project</a></h3>
+								<p data-en="Modelling and Prediction for Movie Ratings." data-de="Modellierung und Vorhersage für Filmbewertungen.">Modelling and Prediction for Movie Ratings.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a  class="image featured"><img src="images/pic05.png" alt="" /></a>
-								<h3><a href="https://www.overleaf.com/articles/sparql-query-optimization-for-federated-linked-data/mhrfhbgmdctk#.WunR0YiFNPZ" target="_blank">Seminar Paper</a></h3>
-								<p>SPARQL Query Optimization for Federated Linked Data.</p>
+								<h3><a href="https://www.overleaf.com/articles/sparql-query-optimization-for-federated-linked-data/mhrfhbgmdctk#.WunR0YiFNPZ" target="_blank" data-en="Seminar Paper" data-de="Seminararbeit">Seminar Paper</a></h3>
+								<p data-en="SPARQL Query Optimization for Federated Linked Data." data-de="SPARQL-Abfrageoptimierung für Federated Linked Data.">SPARQL Query Optimization for Federated Linked Data.</p>
 							</article>
 						</div>
 					</div>
 					<footer>
-						<a href="#skills" class="button large scrolly">View Technical Skills</a>
+						<a href="#talks" class="button large scrolly" data-en="View My Talks" data-de="Meine Vorträge ansehen">View My Talks</a>
 					</footer>
 				</div>
 			</article>
 
+		<!-- Invited Talks -->
+			<article id="talks" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2 data-en="Invited Talks" data-de="Fachvorträge">Invited Talks</h2>
+						<p class="section-intro" data-en="Sharing insights on data science at industry conferences and events." data-de="Fachliche Einblicke in Data Science auf Konferenzen und Branchenveranstaltungen.">Sharing insights on data science at industry conferences and events.</p>
+					</header>
+					<div class="row aln-center">
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style-talk">
+								<div class="talk-image">
+									<img src="images/talk-ai-summit-2025.jpg" alt="Desared presenting at AI, Data Analytics & Insights Summit 2025" />
+								</div>
+								<div class="talk-content">
+									<h3 data-en="AI, Data Analytics & Insights Summit 2025" data-de="AI, Data Analytics & Insights Summit 2025">AI, Data Analytics & Insights Summit 2025</h3>
+									<p class="talk-date"><i class="fa fa-calendar"></i> <span data-en="November 13-14, 2025" data-de="13.-14. November 2025">November 13-14, 2025</span></p>
+									<p class="talk-topic"><i class="fa fa-microphone"></i> <span data-en="Lead Scoring Model: Enhancing CRM processes with predictive analytics" data-de="Lead Scoring Modell: Verbesserung von CRM-Prozessen mit Predictive Analytics">Lead Scoring Model: Enhancing CRM processes with predictive analytics</span></p>
+									<p class="talk-organizer"><i class="fa fa-building"></i> <span data-en="Organized by BERRY Professionals" data-de="Organisiert von BERRY Professionals">Organized by BERRY Professionals</span></p>
+								</div>
+							</article>
+						</div>
+					</div>
+					<footer>
+						<a href="#skills" class="button large scrolly" data-en="View Technical Skills" data-de="Technische Kompetenzen">View Technical Skills</a>
+					</footer>
+				</div>
+			</article>
 
 		<!-- Tech Stack -->
 			<article id="skills" class="wrapper style2">
 				<div class="container">
 					<header>
-						<h2>Technical Expertise</h2>
-						<p>My technical foundation combines statistical analysis with software engineering.</p>
+						<h2 data-en="Technical Expertise" data-de="Technische Expertise">Technical Expertise</h2>
+						<p data-en="My technical foundation combines statistical analysis with software engineering." data-de="Meine technische Grundlage verbindet statistische Analyse mit Softwareentwicklung.">My technical foundation combines statistical analysis with software engineering.</p>
 					</header>
 					<div class="row aln-center">
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
 								<span class="icon solid featured fa fa-certificate"></span>
-								<h3>Certifications</h3>
+								<h3 data-en="Certifications" data-de="Zertifizierungen">Certifications</h3>
 								<p>
                                     <ul>
                                         <li><a href="https://www.udacity.com/certificate/DK9DKALA" target="_blank">Machine Learning DevOps Engineer</a></li>
@@ -367,13 +664,13 @@
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
 								<span class="icon solid featured fa fa-server"></span>
-								<h3>Tech Stack</h3>
+								<h3 data-en="Tech Stack" data-de="Tech Stack">Tech Stack</h3>
 								<p>
 								<ul class="custom-list">
-									<li>Programming: Python, R, SQL</li>
-									<li>Cloud-based: GCP, Databricks</li>
-									<li>Engineering: Spark, Airflow, Docker</li>
-									<li>Frameworks: TensorFlow, Keras, Scikit-Learn, FastAPI</li>
+									<li data-en="Programming: Python, R, SQL" data-de="Programmierung: Python, R, SQL">Programming: Python, R, SQL</li>
+									<li data-en="Cloud-based: GCP, Databricks" data-de="Cloud-basiert: GCP, Databricks">Cloud-based: GCP, Databricks</li>
+									<li data-en="Engineering: Spark, Airflow, Docker" data-de="Engineering: Spark, Airflow, Docker">Engineering: Spark, Airflow, Docker</li>
+									<li data-en="Frameworks: TensorFlow, Keras, Scikit-Learn, FastAPI" data-de="Frameworks: TensorFlow, Keras, Scikit-Learn, FastAPI">Frameworks: TensorFlow, Keras, Scikit-Learn, FastAPI</li>
 								</ul>
 								</p>
 							</section>
@@ -381,20 +678,20 @@
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
 								<span class="icon solid featured fa fa-language"></span>
-								<h3>Languages</h3>
+								<h3 data-en="Languages" data-de="Sprachen">Languages</h3>
 								<p>
 									<ul style="list-style: none; padding: 20;">
 										<li style="display: flex; align-items: center; gap: 10px;">
 											<img src="images/al.png" alt="Albanian Flag" width="20">
-											<span>Native Speaker</span>
+											<span data-en="Native Speaker" data-de="Muttersprache">Native Speaker</span>
 										</li>
 										<li style="display: flex; align-items: center; gap: 10px;">
 											<img src="images/en.png" alt="English Flag" width="20">
-											<span>Full Proficiency</span>
+											<span data-en="Full Proficiency" data-de="Verhandlungssicher">Full Proficiency</span>
 										</li>
 										<li style="display: flex; align-items: center; gap: 10px;">
 											<img src="images/gr.png" alt="Greek Flag" width="20">
-											<span>Working Proficiency</span>
+											<span data-en="Working Proficiency" data-de="Gute Kenntnisse">Working Proficiency</span>
 										</li>
 									</ul>
 								</p>
@@ -402,7 +699,7 @@
 						</div>
 					</div>
 					<footer>
-						<a href="#contact" class="button large scrolly">Get In Touch</a>
+						<a href="#contact" class="button large scrolly" data-en="Get In Touch" data-de="Kontakt">Get In Touch</a>
 					</footer>
 				</div>
 			</article>
@@ -411,8 +708,8 @@
 			<article id="contact" class="wrapper style4">
 				<div class="container medium">
 					<header>
-						<h2>Let's Connect</h2>
-						<p class="section-intro">Interested in collaborating on data science projects or discussing opportunities? I'd love to hear from you.</p>
+						<h2 data-en="Let's Connect" data-de="Kontakt aufnehmen">Let's Connect</h2>
+						<p class="section-intro" data-en="Interested in collaborating on data science projects or discussing opportunities? I'd love to hear from you." data-de="Sie interessieren sich für eine Zusammenarbeit bei Data-Science-Projekten oder möchten neue Möglichkeiten besprechen? Ich freue mich auf Ihre Nachricht.">Interested in collaborating on data science projects or discussing opportunities? I'd love to hear from you.</p>
 					</header>
                     <!-- Contact Form -->
 					<div class="row">
@@ -420,20 +717,20 @@
 							<form id="contactForm">
 								<div class="row">
 									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name *" required />
+										<input type="text" name="name" id="name" data-placeholder-en="Name *" data-placeholder-de="Name *" placeholder="Name *" required />
 									</div>
 									<div class="col-6 col-12-small">
-										<input type="email" name="email" id="email" placeholder="Email *" required />
+										<input type="email" name="email" id="email" data-placeholder-en="Email *" data-placeholder-de="E-Mail *" placeholder="Email *" required />
 									</div>
 									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject *" required />
+										<input type="text" name="subject" id="subject" data-placeholder-en="Subject *" data-placeholder-de="Betreff *" placeholder="Subject *" required />
 									</div>
 									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message *" rows="6" required></textarea>
+										<textarea name="message" id="message" data-placeholder-en="Message *" data-placeholder-de="Nachricht *" placeholder="Message *" rows="6" required></textarea>
 									</div>
 									<div class="col-12">
 										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="button" id="submitBtn" /></li>
+											<li><input type="submit" data-value-en="Send Message" data-value-de="Nachricht senden" value="Send Message" class="button" id="submitBtn" /></li>
 										</ul>
 									</div>
 								</div>
@@ -511,7 +808,7 @@
 
 						<div class="col-12">
 							<hr />
-							<h3>Find me on ...</h3>
+							<h3 data-en="Find me on ..." data-de="Vernetzen Sie sich mit mir">Find me on ...</h3>
 							<ul class="social">
 								<li><a href="https://www.linkedin.com/in/desared/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
                                 <li><a href="https://www.xing.com/profile/Desared_Osmanllari/web_profiles?expandNeffi=true" class="icon brands fa-xing" target="_blank"><span class="label">Xing</span></a></li>
@@ -611,6 +908,83 @@
 					behavior: "smooth"
 				});
 			});
+		</script>
+
+		<!-- Language Dropdown Script -->
+		<script>
+			(function() {
+				const dropdown = document.getElementById('langDropdown');
+				const dropdownBtn = document.getElementById('langDropdownBtn');
+				const currentFlag = document.getElementById('currentFlag');
+				const currentLangText = document.getElementById('currentLang');
+				const langOptions = document.querySelectorAll('.lang-option');
+
+				const languages = {
+					en: { flag: '🇬🇧', name: 'EN' },
+					de: { flag: '🇩🇪', name: 'DE' }
+				};
+
+				// Get saved language or default to English
+				let currentLang = localStorage.getItem('preferred-lang') || 'en';
+
+				// Toggle dropdown
+				dropdownBtn.addEventListener('click', function(e) {
+					e.stopPropagation();
+					dropdown.classList.toggle('open');
+				});
+
+				// Close dropdown when clicking outside
+				document.addEventListener('click', function() {
+					dropdown.classList.remove('open');
+				});
+
+				function switchLanguage(lang) {
+					currentLang = lang;
+					localStorage.setItem('preferred-lang', lang);
+
+					// Update dropdown button display
+					currentFlag.textContent = languages[lang].flag;
+					currentLangText.textContent = languages[lang].name;
+
+					// Update active state in menu
+					langOptions.forEach(function(option) {
+						if (option.dataset.lang === lang) {
+							option.classList.add('active');
+						} else {
+							option.classList.remove('active');
+						}
+					});
+
+					// Update all elements with data-en/data-de attributes
+					document.querySelectorAll('[data-en][data-de]').forEach(function(el) {
+						el.textContent = el.getAttribute('data-' + lang);
+					});
+
+					// Update placeholders for form inputs
+					document.querySelectorAll('[data-placeholder-en][data-placeholder-de]').forEach(function(el) {
+						el.placeholder = el.getAttribute('data-placeholder-' + lang);
+					});
+
+					// Update submit button value
+					document.querySelectorAll('[data-value-en][data-value-de]').forEach(function(el) {
+						el.value = el.getAttribute('data-value-' + lang);
+					});
+
+					// Close dropdown
+					dropdown.classList.remove('open');
+				}
+
+				// Set initial language on page load
+				switchLanguage(currentLang);
+
+				// Add click handlers to options
+				langOptions.forEach(function(option) {
+					option.addEventListener('click', function(e) {
+						e.stopPropagation();
+						switchLanguage(this.dataset.lang);
+					});
+				});
+			})();
 		</script>
 
 	</body>
