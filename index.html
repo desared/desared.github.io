@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 
 <head>
 	<link rel="shortcut icon" href="images/logo.jpg" />
@@ -523,8 +523,8 @@
 						data-de="Leidenschaftlicher Data Scientist mit über 7 Jahren Erfahrung in datengetriebener Anwendungsentwicklung und maschinellem Lernen.">
 						Passionate Data Scientist with over 7 years of experience specialising in data-driven
 						application development and machine learning.</p>
-					<a href="#profile" class="button large scrolly" data-en="View My Work"
-						data-de="Zu meinen Projekten">View My Work</a>
+					<a href="#profile" class="button large scrolly" data-en="More About Me"
+						data-de="Mehr über mich">More About Me</a>
 				</div>
 			</div>
 		</div>
@@ -1039,6 +1039,7 @@
 			function switchLanguage(lang) {
 				currentLang = lang;
 				localStorage.setItem('preferred-lang', lang);
+				document.documentElement.lang = lang;
 
 				// Update dropdown button display
 				currentFlag.textContent = languages[lang].flag;
