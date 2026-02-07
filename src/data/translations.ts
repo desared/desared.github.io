@@ -157,8 +157,8 @@ export const translations = {
             level: "Full Proficiency",
           },
           {
-            name: "Greek",
-            flag: "/images/gr.png",
+            name: "German",
+            flag: "/images/de.png",
             level: "Working Proficiency",
           },
         ],
@@ -346,8 +346,8 @@ export const translations = {
             level: "Verhandlungssicher",
           },
           {
-            name: "Griechisch",
-            flag: "/images/gr.png",
+            name: "Deutsch",
+            flag: "/images/de.png",
             level: "Gute Kenntnisse",
           },
         ],
