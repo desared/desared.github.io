@@ -113,14 +113,14 @@ export function Hero() {
 
           {/* Right content - 3 cols */}
           <div className="lg:col-span-3 space-y-6 order-1 lg:order-2">
-            <p className="font-mono text-primary text-sm tracking-widest uppercase">
-              {t.hero.label}
-            </p>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               {t.hero.greeting}{" "}
               <span className="text-primary">{t.hero.name}</span>
             </h1>
+
+            <p className="font-mono text-primary text-sm tracking-widest uppercase">
+              {t.hero.label}
+            </p>
 
             <p className="text-muted-foreground text-lg max-w-xl leading-relaxed">
               {t.hero.description}
