@@ -48,6 +48,13 @@ export const translations = {
         "A selection of academic research and open-source machine learning projects demonstrating end-to-end ML solutions.",
       projects: [
         {
+          title: "AI-based Decision Simulator",
+          description:
+            "Ask anything and the AI-powered simulator will model the outcomes.",
+          image: "/images/shouldi.png",
+          link: "https://shouldi.io",
+        },
+        {
           title: "AI Personal Assistant",
           description:
             "24/7 AI assistant with Calendar, Web Search & Telegram integration.",
@@ -232,6 +239,13 @@ export const translations = {
       intro:
         "Eine Auswahl akademischer Forschungs- und Open-Source Machine Learning Projekte mit End-to-End ML-Lösungen.",
       projects: [
+        {
+          title: "KI-basierter Entscheidungssimulator",
+          description:
+            "Stellen Sie eine beliebige Frage und der KI-Simulator modelliert die Ergebnisse.",
+          image: "/images/shouldi.png",
+          link: "https://shouldi.io",
+        },
         {
           title: "KI-Assistent",
           description:
