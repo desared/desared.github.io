@@ -19,7 +19,10 @@ export const metadata: Metadata = {
   description:
     "Passionate Data Scientist with over 7 years of experience specialising in data-driven application development and machine learning.",
   icons: {
-    icon: "/images/logo.jpg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/images/logo.png", type: "image/png" },
+    ],
   },
 };
 
