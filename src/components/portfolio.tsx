@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/lib/i18n";
 import { ExternalLink, BrainCircuit } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -22,14 +23,9 @@ export function Portfolio() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {t.portfolio.projects.map((project, i) => (
-            <a
-              key={i}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group"
-            >
+          {t.portfolio.projects.map((project, i) => {
+            const hasSlug = "slug" in project && project.slug;
+            const cardContent = (
               <Card className="bg-card/50 border-border hover:border-primary/30 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 h-full">
                 <div className="relative h-44 overflow-hidden">
                   {project.image ? (
@@ -45,9 +41,11 @@ export function Portfolio() {
                     </div>
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent" />
-                  <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-card/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ExternalLink className="h-4 w-4 text-primary" />
-                  </div>
+                  {!hasSlug && (
+                    <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-card/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ExternalLink className="h-4 w-4 text-primary" />
+                    </div>
+                  )}
                 </div>
                 <div className="p-5 space-y-2">
                   <h3 className="font-semibold group-hover:text-primary transition-colors">
@@ -58,8 +56,28 @@ export function Portfolio() {
                   </p>
                 </div>
               </Card>
-            </a>
-          ))}
+            );
+
+            return hasSlug ? (
+              <Link
+                key={i}
+                href={`/projects/${project.slug}`}
+                className="group"
+              >
+                {cardContent}
+              </Link>
+            ) : (
+              <a
+                key={i}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                {cardContent}
+              </a>
+            );
+          })}
         </div>
 
         <div className="text-center mt-12">

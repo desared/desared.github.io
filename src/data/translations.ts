@@ -53,6 +53,7 @@ export const translations = {
             "Ask anything and the AI-powered simulator will model the outcomes.",
           image: "/images/shouldi.png",
           link: "https://shouldi.io",
+          slug: "ai-decision-simulator",
         },
         {
           title: "AI Personal Assistant",
@@ -67,6 +68,7 @@ export const translations = {
             "Machine Learning Model Deployment using Heroku and FastAPI.",
           image: "/images/pic01.jpg",
           link: "https://github.com/desared/Deploying-ML-Model-Heroku-FastAPI",
+          slug: "ml-platform",
         },
         {
           title: "Customer Segmentation",
@@ -232,6 +234,7 @@ export const translations = {
             "Stellen Sie eine beliebige Frage und der KI-Simulator modelliert die Ergebnisse.",
           image: "/images/shouldi.png",
           link: "https://shouldi.io",
+          slug: "ai-decision-simulator",
         },
         {
           title: "KI-Assistent",
@@ -246,6 +249,7 @@ export const translations = {
             "Machine Learning Modell-Deployment mit Heroku und FastAPI.",
           image: "/images/pic01.jpg",
           link: "https://github.com/desared/Deploying-ML-Model-Heroku-FastAPI",
+          slug: "ml-platform",
         },
         {
           title: "Kundensegmentierung",
