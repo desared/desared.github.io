@@ -89,19 +89,6 @@ export const translations = {
           image: "/images/pic06.png",
           link: "https://github.com/desared/ML-pipeline-rental-prices",
         },
-        {
-          title: "Lab Project",
-          description: "Modelling and Prediction for Movie Ratings.",
-          image: "/images/pic04.png",
-          link: "https://github.com/desared/Analysis-and-Prediction-on-Movies",
-        },
-        {
-          title: "Seminar Paper",
-          description:
-            "SPARQL Query Optimization for Federated Linked Data.",
-          image: "/images/pic05.png",
-          link: "https://www.overleaf.com/articles/sparql-query-optimization-for-federated-linked-data/mhrfhbgmdctk#.WunR0YiFNPZ",
-        },
       ],
       cta: "View My Talks",
     },
@@ -280,19 +267,6 @@ export const translations = {
             "ML-Pipeline zur Preisvorhersage für Kurzzeitvermietungen in NYC.",
           image: "/images/pic06.png",
           link: "https://github.com/desared/ML-pipeline-rental-prices",
-        },
-        {
-          title: "Laborprojekt",
-          description: "Modellierung und Vorhersage für Filmbewertungen.",
-          image: "/images/pic04.png",
-          link: "https://github.com/desared/Analysis-and-Prediction-on-Movies",
-        },
-        {
-          title: "Seminararbeit",
-          description:
-            "SPARQL-Abfrageoptimierung für Federated Linked Data.",
-          image: "/images/pic05.png",
-          link: "https://www.overleaf.com/articles/sparql-query-optimization-for-federated-linked-data/mhrfhbgmdctk#.WunR0YiFNPZ",
         },
       ],
       cta: "Meine Vorträge ansehen",
