@@ -61,6 +61,7 @@ export const translations = {
             "24/7 AI assistant with Calendar, Web Search & Telegram integration.",
           image: "/images/clawd_bot.jpg",
           link: "/images/clawd.gif",
+          slug: "ai-personal-assistant",
         },
         {
           title: "MLOPS",
@@ -242,6 +243,7 @@ export const translations = {
             "24/7-KI-Assistent mit Kalender-, Websuche- und Telegram-Integration.",
           image: "/images/clawd_bot.jpg",
           link: "/images/clawd.gif",
+          slug: "ai-personal-assistant",
         },
         {
           title: "MLOPS",

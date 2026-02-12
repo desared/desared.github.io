@@ -51,16 +51,18 @@ export function ProjectDetailClient({ slug }: { slug: string }) {
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
             {project.description}
           </p>
-          <Button asChild size="lg">
-            <a
-              href={project.liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {lang === "en" ? "View Live Project" : "Live-Projekt ansehen"}
-              <ExternalLink className="h-4 w-4 ml-2" />
-            </a>
-          </Button>
+          {project.liveLink && (
+            <Button asChild size="lg">
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {lang === "en" ? "View Live Project" : "Live-Projekt ansehen"}
+                <ExternalLink className="h-4 w-4 ml-2" />
+              </a>
+            </Button>
+          )}
         </div>
 
         {/* Project image */}
@@ -128,16 +130,18 @@ export function ProjectDetailClient({ slug }: { slug: string }) {
               {lang === "en" ? "All Projects" : "Alle Projekte"}
             </Link>
           </Button>
-          <Button asChild>
-            <a
-              href={project.liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {lang === "en" ? "View Live Project" : "Live-Projekt ansehen"}
-              <ExternalLink className="h-4 w-4 ml-2" />
-            </a>
-          </Button>
+          {project.liveLink && (
+            <Button asChild>
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {lang === "en" ? "View Live Project" : "Live-Projekt ansehen"}
+                <ExternalLink className="h-4 w-4 ml-2" />
+              </a>
+            </Button>
+          )}
         </div>
       </div>
     </main>

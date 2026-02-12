@@ -5,7 +5,7 @@ export interface ProjectDetail {
   title: string;
   subtitle: string;
   description: string;
-  liveLink: string;
+  liveLink?: string;
   image: string;
   metrics: { value: string; label: string }[];
   sections: { title: string; content: string }[];
@@ -14,6 +14,50 @@ export interface ProjectDetail {
 
 const projectDetails: Record<Lang, ProjectDetail[]> = {
   en: [
+    {
+      slug: "ai-personal-assistant",
+      title: "AI Personal Assistant",
+      subtitle: "ClawdBot",
+      description:
+        "A 24/7 AI-powered personal assistant that lives inside your chat apps. It manages calendars, searches the web in real time, sends proactive reminders, and runs workflows — all from Telegram.",
+      image: "/images/clawd_bot.jpg",
+      metrics: [
+        { value: "24/7", label: "Always On" },
+        { value: "Free", label: "Infrastructure" },
+        { value: "6", label: "Integrations" },
+        { value: "Real-time", label: "Web Search" },
+      ],
+      sections: [
+        {
+          title: "The Challenge",
+          content:
+            "Most AI tools like ChatGPT are general-purpose interfaces — reactive and session-based. You visit them, ask a question, and leave. But a true personal assistant should work for you around the clock: managing calendars, sending reminders, running workflows, and searching the web — even while you're walking down the street. The goal was to build exactly that, without expensive hardware.",
+        },
+        {
+          title: "Our Approach",
+          content:
+            "The assistant runs on an AWS EC2 free-tier instance, using the Gemini API for reasoning (pay-as-you-go). Telegram serves as the primary interface, though it can be swapped for WhatsApp or iMessage. The Brave Search API enables real-time web searches, while the Google Calendar API acts as the execution layer for managing appointments. A custom calendar Skill serves as the decision layer, guiding how and when the Calendar API is used.",
+        },
+        {
+          title: "Key Features",
+          content:
+            "Always-On Design — unlike session-based AI tools, ClawdBot is a persistent assistant that works proactively in the background. Calendar Management — add, modify, or delete appointments through natural conversation. Proactive Reminders — the assistant sends notifications without being asked. Real-Time Web Search — fetches live information from the internet via Brave Search. Workflow Automation — runs multi-step workflows triggered by simple chat commands. Skill-Based Architecture — a custom decision layer determines how and when each API is invoked.",
+        },
+        {
+          title: "Results & Impact",
+          content:
+            "The project demonstrates that building a serious AI assistant doesn't require shiny new hardware — just a server, the right APIs, and a mindset shift from tools to agents. The system runs reliably 24/7 on free-tier infrastructure, handles calendar operations, web searches, and proactive notifications, all through a simple Telegram conversation.",
+        },
+      ],
+      technologies: [
+        "AWS EC2",
+        "Gemini API",
+        "Telegram Bot API",
+        "Brave Search API",
+        "Google Calendar API",
+        "Python",
+      ],
+    },
     {
       slug: "ai-decision-simulator",
       title: "AI-based Decision Simulator",
@@ -68,8 +112,6 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       subtitle: "MLOps Pipeline",
       description:
         "A production-grade machine learning pipeline spanning from data versioning and model training to API serving and cloud deployment with full CI/CD automation.",
-      liveLink:
-        "https://github.com/desared/Deploying-ML-Model-Heroku-FastAPI",
       image: "/images/pic01.jpg",
       metrics: [
         { value: "100%", label: "CI/CD Automated" },
@@ -113,6 +155,50 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
     },
   ],
   de: [
+    {
+      slug: "ai-personal-assistant",
+      title: "KI-Assistent",
+      subtitle: "ClawdBot",
+      description:
+        "Ein 24/7-KI-Assistent, der in Ihren Chat-Apps lebt. Er verwaltet Kalender, durchsucht das Web in Echtzeit, sendet proaktive Erinnerungen und führt Workflows aus — alles über Telegram.",
+      image: "/images/clawd_bot.jpg",
+      metrics: [
+        { value: "24/7", label: "Immer aktiv" },
+        { value: "Gratis", label: "Infrastruktur" },
+        { value: "6", label: "Integrationen" },
+        { value: "Echtzeit", label: "Websuche" },
+      ],
+      sections: [
+        {
+          title: "Die Herausforderung",
+          content:
+            "Die meisten KI-Tools wie ChatGPT sind allgemeine Interfaces — reaktiv und sitzungsbasiert. Man besucht sie, stellt eine Frage und geht. Ein echter persönlicher Assistent sollte jedoch rund um die Uhr für Sie arbeiten: Kalender verwalten, Erinnerungen senden, Workflows ausführen und das Web durchsuchen — selbst wenn Sie gerade unterwegs sind. Das Ziel war, genau das zu bauen, ohne teure Hardware.",
+        },
+        {
+          title: "Unser Ansatz",
+          content:
+            "Der Assistent läuft auf einer AWS EC2 Free-Tier-Instanz und nutzt die Gemini API für das Reasoning (nutzungsbasiert). Telegram dient als primäres Interface, kann aber gegen WhatsApp oder iMessage ausgetauscht werden. Die Brave Search API ermöglicht Echtzeit-Websuchen, während die Google Calendar API als Ausführungsschicht für die Terminverwaltung dient. Ein benutzerdefinierter Kalender-Skill fungiert als Entscheidungsschicht und steuert, wie und wann die Calendar API verwendet wird.",
+        },
+        {
+          title: "Hauptfunktionen",
+          content:
+            "Always-On Design — im Gegensatz zu sitzungsbasierten KI-Tools ist ClawdBot ein persistenter Assistent, der proaktiv im Hintergrund arbeitet. Kalenderverwaltung — Termine hinzufügen, ändern oder löschen durch natürliche Konversation. Proaktive Erinnerungen — der Assistent sendet Benachrichtigungen ohne Aufforderung. Echtzeit-Websuche — holt live Informationen aus dem Internet über Brave Search. Workflow-Automatisierung — führt mehrstufige Workflows durch einfache Chat-Befehle aus. Skill-basierte Architektur — eine benutzerdefinierte Entscheidungsschicht bestimmt, wie und wann jede API aufgerufen wird.",
+        },
+        {
+          title: "Ergebnisse & Wirkung",
+          content:
+            "Das Projekt zeigt, dass der Bau eines ernsthaften KI-Assistenten keine teure Hardware erfordert — nur einen Server, die richtigen APIs und einen Perspektivwechsel von Tools zu Agenten. Das System läuft zuverlässig 24/7 auf Free-Tier-Infrastruktur, verarbeitet Kalenderoperationen, Websuchen und proaktive Benachrichtigungen — alles über eine einfache Telegram-Konversation.",
+        },
+      ],
+      technologies: [
+        "AWS EC2",
+        "Gemini API",
+        "Telegram Bot API",
+        "Brave Search API",
+        "Google Calendar API",
+        "Python",
+      ],
+    },
     {
       slug: "ai-decision-simulator",
       title: "KI-basierter Entscheidungssimulator",
@@ -167,8 +253,6 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       subtitle: "MLOps Pipeline",
       description:
         "Eine produktionsreife Machine-Learning-Pipeline von der Datenversionierung und Modelltraining bis zum API-Serving und Cloud-Deployment mit vollständiger CI/CD-Automatisierung.",
-      liveLink:
-        "https://github.com/desared/Deploying-ML-Model-Heroku-FastAPI",
       image: "/images/pic01.jpg",
       metrics: [
         { value: "100%", label: "CI/CD Automatisiert" },
