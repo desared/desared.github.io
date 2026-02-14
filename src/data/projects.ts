@@ -7,6 +7,7 @@ export interface ProjectDetail {
   description: string;
   liveLink?: string;
   image: string;
+  demoImage?: string;
   metrics: { value: string; label: string }[];
   sections: { title: string; content: string }[];
   technologies: string[];
@@ -21,6 +22,7 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       description:
         "A 24/7 AI-powered personal assistant that lives inside your chat apps. It manages calendars, searches the web in real time, sends proactive reminders, and runs workflows — all from Telegram.",
       image: "/images/clawd_bot.jpg",
+      demoImage: "/images/clawd.gif",
       metrics: [
         { value: "24/7", label: "Always On" },
         { value: "Free", label: "Infrastructure" },
@@ -299,6 +301,7 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       description:
         "Ein 24/7-KI-Assistent, der in Ihren Chat-Apps lebt. Er verwaltet Kalender, durchsucht das Web in Echtzeit, sendet proaktive Erinnerungen und führt Workflows aus — alles über Telegram.",
       image: "/images/clawd_bot.jpg",
+      demoImage: "/images/clawd.gif",
       metrics: [
         { value: "24/7", label: "Immer aktiv" },
         { value: "Gratis", label: "Infrastruktur" },

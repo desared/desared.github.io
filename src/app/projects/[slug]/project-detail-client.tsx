@@ -122,6 +122,26 @@ export function ProjectDetailClient({ slug }: { slug: string }) {
           </div>
         </div>
 
+        {/* Demo image */}
+        {project.demoImage && (
+          <div className="mt-16 space-y-4">
+            <h2 className="text-2xl font-bold">
+              {lang === "en" ? "Live Demo" : "Live-Demo"}
+            </h2>
+            <div className="flex justify-center">
+              <div className="relative rounded-xl overflow-hidden border border-border max-w-sm">
+                <Image
+                  src={project.demoImage}
+                  alt={`${project.title} demo`}
+                  width={400}
+                  height={800}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Bottom CTA */}
         <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <Button asChild variant="outline">
