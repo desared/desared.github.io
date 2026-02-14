@@ -77,6 +77,7 @@ export const translations = {
             "Customer Segmentation Report for Arvato Financial Services.",
           image: "/images/pic02.jpg",
           link: "https://github.com/desared/Arvato-Bertelsmann-Customer-Acquisition",
+          slug: "customer-segmentation",
         },
         {
           title: "Risk Assessment",
@@ -84,6 +85,7 @@ export const translations = {
             "Create, deploy, and monitor a dynamic risk assessment system.",
           image: "/images/pic03.png",
           link: "https://github.com/desared/Dynamic-Risk-Assessment-System",
+          slug: "risk-assessment",
         },
         {
           title: "ML Pipeline",
@@ -91,6 +93,7 @@ export const translations = {
             "ML Pipeline for Short-Term Rental Prices in NYC.",
           image: "/images/pic06.png",
           link: "https://github.com/desared/ML-pipeline-rental-prices",
+          slug: "ml-pipeline",
         },
       ],
       cta: "View My Talks",
@@ -259,6 +262,7 @@ export const translations = {
             "Kundensegmentierungsbericht für Arvato Financial Services.",
           image: "/images/pic02.jpg",
           link: "https://github.com/desared/Arvato-Bertelsmann-Customer-Acquisition",
+          slug: "customer-segmentation",
         },
         {
           title: "Risikobewertung",
@@ -266,6 +270,7 @@ export const translations = {
             "Entwicklung, Bereitstellung und Monitoring eines dynamischen Risikobewertungssystems.",
           image: "/images/pic03.png",
           link: "https://github.com/desared/Dynamic-Risk-Assessment-System",
+          slug: "risk-assessment",
         },
         {
           title: "ML Pipeline",
@@ -273,6 +278,7 @@ export const translations = {
             "ML-Pipeline zur Preisvorhersage für Kurzzeitvermietungen in NYC.",
           image: "/images/pic06.png",
           link: "https://github.com/desared/ML-pipeline-rental-prices",
+          slug: "ml-pipeline",
         },
       ],
       cta: "Meine Vorträge ansehen",
