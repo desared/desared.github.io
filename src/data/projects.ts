@@ -159,8 +159,6 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       subtitle: "Customer Segmentation",
       description:
         "A data-driven customer acquisition strategy combining unsupervised segmentation with supervised learning to identify high-value prospects from 891K+ demographic records.",
-      liveLink:
-        "https://github.com/desared/Arvato-Bertelsmann-Customer-Acquisition",
       image: "/images/pic02.jpg",
       metrics: [
         { value: "891K+", label: "Records Analyzed" },
@@ -208,8 +206,6 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       subtitle: "ML DevOps",
       description:
         "An automated ML system that predicts client attrition risk for a company managing 10,000 corporate clients, with continuous monitoring, retraining, and API-based predictions.",
-      liveLink:
-        "https://github.com/desared/Dynamic-Risk-Assessment-System",
       image: "/images/pic03.png",
       metrics: [
         { value: "10K", label: "Clients Monitored" },
@@ -255,8 +251,6 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       subtitle: "Reproducible ML Workflow",
       description:
         "A fully reproducible machine learning pipeline for predicting short-term rental prices in New York City, designed to retrain weekly as new data arrives.",
-      liveLink:
-        "https://github.com/desared/ML-pipeline-rental-prices",
       image: "/images/pic06.png",
       metrics: [
         { value: "100%", label: "Reproducible" },
@@ -443,8 +437,6 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       subtitle: "Kundensegmentierung",
       description:
         "Eine datengetriebene Kundenakquisitionsstrategie, die unüberwachte Segmentierung mit überwachtem Lernen kombiniert, um hochwertige Interessenten aus 891K+ demografischen Datensätzen zu identifizieren.",
-      liveLink:
-        "https://github.com/desared/Arvato-Bertelsmann-Customer-Acquisition",
       image: "/images/pic02.jpg",
       metrics: [
         { value: "891K+", label: "Datensätze analysiert" },
@@ -492,8 +484,6 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       subtitle: "ML DevOps",
       description:
         "Ein automatisiertes ML-System zur Vorhersage des Abwanderungsrisikos von Kunden für ein Unternehmen mit 10.000 Firmenkunden, mit kontinuierlichem Monitoring, Retraining und API-basierten Vorhersagen.",
-      liveLink:
-        "https://github.com/desared/Dynamic-Risk-Assessment-System",
       image: "/images/pic03.png",
       metrics: [
         { value: "10K", label: "Kunden überwacht" },
@@ -539,8 +529,6 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       subtitle: "Reproduzierbarer ML-Workflow",
       description:
         "Eine vollständig reproduzierbare Machine-Learning-Pipeline zur Vorhersage von Kurzzeitvermietungspreisen in New York City, die für wöchentliches Retraining mit neuen Daten ausgelegt ist.",
-      liveLink:
-        "https://github.com/desared/ML-pipeline-rental-prices",
       image: "/images/pic06.png",
       metrics: [
         { value: "100%", label: "Reproduzierbar" },
