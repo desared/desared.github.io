@@ -116,6 +116,7 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       subtitle: "MLOps Pipeline",
       description:
         "A production-grade machine learning pipeline spanning from data versioning and model training to API serving and cloud deployment with full CI/CD automation.",
+      githubLink: "https://github.com/desared/Deploying-ML-Model-Heroku-FastAPI",
       image: "/images/pic01.jpg",
       metrics: [
         { value: "100%", label: "CI/CD Automated" },
@@ -396,6 +397,7 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       subtitle: "MLOps Pipeline",
       description:
         "Eine produktionsreife Machine-Learning-Pipeline von der Datenversionierung und Modelltraining bis zum API-Serving und Cloud-Deployment mit vollständiger CI/CD-Automatisierung.",
+      githubLink: "https://github.com/desared/Deploying-ML-Model-Heroku-FastAPI",
       image: "/images/pic01.jpg",
       metrics: [
         { value: "100%", label: "CI/CD Automatisiert" },
