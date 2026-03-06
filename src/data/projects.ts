@@ -6,6 +6,7 @@ export interface ProjectDetail {
   subtitle: string;
   description: string;
   liveLink?: string;
+  githubLink?: string;
   image: string;
   demoImage?: string;
   metrics: { value: string; label: string }[];
@@ -67,6 +68,7 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       description:
         "Ask anything and the AI-powered simulator will model the outcomes. Type \"Should I...?\" and receive a comprehensive decision analysis powered by advanced AI.",
       liveLink: "https://shouldi.io",
+      githubLink: "https://github.com/desared/life-decision-simulator",
       image: "/images/shouldi.png",
       metrics: [
         { value: "1K+", label: "Users" },
@@ -346,6 +348,7 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       description:
         "Stellen Sie eine beliebige Frage und der KI-Simulator modelliert die Ergebnisse. Geben Sie \"Should I...?\" ein und erhalten Sie eine umfassende Entscheidungsanalyse.",
       liveLink: "https://shouldi.io",
+      githubLink: "https://github.com/desared/life-decision-simulator",
       image: "/images/shouldi.png",
       metrics: [
         { value: "1K+", label: "Nutzer" },

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n";
 import { getProjectBySlug } from "@/data/projects";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, GithubIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -51,18 +51,32 @@ export function ProjectDetailClient({ slug }: { slug: string }) {
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
             {project.description}
           </p>
-          {project.liveLink && (
-            <Button asChild size="lg">
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {lang === "en" ? "View Live Project" : "Live-Projekt ansehen"}
-                <ExternalLink className="h-4 w-4 ml-2" />
-              </a>
-            </Button>
-          )}
+          <div className="flex items-center gap-3 flex-wrap">
+            {project.liveLink && (
+              <Button asChild size="lg">
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {lang === "en" ? "View Live Project" : "Live-Projekt ansehen"}
+                  <ExternalLink className="h-4 w-4 ml-2" />
+                </a>
+              </Button>
+            )}
+            {project.githubLink && (
+              <Button asChild size="lg" variant="outline">
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GithubIcon className="h-4 w-4 mr-2" />
+                  GitHub
+                </a>
+              </Button>
+            )}
+          </div>
         </div>
 
         {/* Project image */}
