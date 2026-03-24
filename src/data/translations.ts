@@ -29,6 +29,12 @@ export const translations = {
           icon: "search" as const,
         },
         {
+          title: "Founder of ActOnData",
+          description: "Building Data Products",
+          icon: "rocket" as const,
+          link: "https://actondata.io",
+        },
+        {
           title: "Education",
           description:
             "MSc in Software Systems Engineering from RWTH Aachen University",
@@ -212,6 +218,12 @@ export const translations = {
           title: "Data Science Experte",
           description: "Senior Data Scientist bei Sonova Digital",
           icon: "search" as const,
+        },
+        {
+          title: "Gründer von ActOnData",
+          description: "Building Data Products",
+          icon: "rocket" as const,
+          link: "https://actondata.io",
         },
         {
           title: "Bildung",
