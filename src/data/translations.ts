@@ -151,6 +151,10 @@ export const translations = {
             label: "Frameworks",
             items: ["TensorFlow", "Keras", "Scikit-Learn", "FastAPI"],
           },
+          {
+            label: "Vibe Coding",
+            items: ["Antigravity", "Claude Code", "Firebase", "Vercel"],
+          },
         ],
       },
       languages: {
@@ -341,6 +345,10 @@ export const translations = {
           {
             label: "Frameworks",
             items: ["TensorFlow", "Keras", "Scikit-Learn", "FastAPI"],
+          },
+          {
+            label: "Vibe Coding",
+            items: ["Antigravity", "Claude Code", "Firebase", "Vercel"],
           },
         ],
       },
