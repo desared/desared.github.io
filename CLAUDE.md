@@ -9,8 +9,8 @@ This is a **personal portfolio website** for Desared Osmanllari (Data Scientist)
 **Technology Stack:**
 - Next.js 16 (App Router) with static export
 - TypeScript
-- Tailwind CSS (dark theme)
-- shadcn/ui (Button, Card, Badge, Input, Textarea, Label)
+- Tailwind CSS v4 (dark theme) — uses `@theme inline` syntax, **not** `tailwind.config.ts`
+- shadcn/ui (Button, Card, Badge, Input, Textarea, Label) — New York style, Slate base
 - Lucide React (icons)
 - Google Fonts via `next/font` (Inter + JetBrains Mono)
 - Firebase Firestore (contact form backend)
@@ -44,35 +44,41 @@ Pushes to `master` trigger a GitHub Actions workflow (`.github/workflows/nextjs.
 ```
 src/
 ├── app/
-│   ├── layout.tsx       # Root layout (fonts, metadata, LanguageProvider)
-│   ├── page.tsx         # Main page composing all sections
-│   └── globals.css      # Tailwind + CSS variables (dark theme)
+│   ├── layout.tsx                    # Root layout (fonts, metadata, LanguageProvider)
+│   ├── page.tsx                      # Main page composing all sections
+│   ├── globals.css                   # Tailwind + CSS variables (dark theme)
+│   └── projects/[slug]/
+│       ├── page.tsx                  # Static params + server wrapper
+│       └── project-detail-client.tsx # Client-side project detail view
 ├── components/
-│   ├── ui/              # shadcn/ui primitives (button, card, badge, etc.)
-│   ├── navigation.tsx   # Fixed nav with terminal branding + language switcher
-│   ├── hero.tsx         # Hero section
-│   ├── about.tsx        # About section (3 cards)
-│   ├── portfolio.tsx    # Project grid
-│   ├── talks.tsx        # Invited talks
-│   ├── skills.tsx       # Technical expertise (certs, stack, languages)
-│   ├── contact.tsx      # Contact form + social links
-│   ├── footer.tsx       # Copyright
+│   ├── ui/                           # shadcn/ui primitives
+│   ├── navigation.tsx                # Fixed nav with terminal branding + language switcher
+│   ├── hero.tsx
+│   ├── about.tsx                     # 3 cards (bio, founder, links)
+│   ├── portfolio.tsx                 # Project grid linking to /projects/[slug]
+│   ├── talks.tsx                     # Invited talks
+│   ├── skills.tsx                    # Certs, tech stack, languages
+│   ├── contact.tsx                   # Contact form + social links
+│   ├── footer.tsx
 │   └── scroll-to-top.tsx
 ├── lib/
-│   ├── utils.ts         # shadcn cn() utility
-│   ├── firebase.ts      # Firebase config + Firestore init
-│   └── i18n.tsx         # Language context provider + useLanguage hook
+│   ├── utils.ts                      # shadcn cn() utility
+│   ├── firebase.ts                   # Firebase config + Firestore init
+│   └── i18n.tsx                      # Language context provider + useLanguage hook
 └── data/
-    └── translations.ts  # All EN/DE content
+    ├── translations.ts               # All EN/DE UI text content
+    └── projects.ts                   # Project detail data (descriptions, links, tags)
 ```
 
 ### Key Patterns
 
 - **Single page app**: All sections are composed in `src/app/page.tsx`
-- **i18n**: Client-side language switching via React context (`src/lib/i18n.tsx`), persists to localStorage
-- **All content** lives in `src/data/translations.ts` (both EN and DE)
+- **i18n**: Client-side language switching via React context (`src/lib/i18n.tsx`), persists to localStorage. Translations typed as `(typeof translations)[Lang]` — avoid indexing with `["en"]` directly
+- **Content split**: UI text in `src/data/translations.ts` (EN/DE); project detail data in `src/data/projects.ts`
+- **Project detail pages**: Static routes generated via `generateStaticParams` in `src/app/projects/[slug]/page.tsx`
 - **Static export**: `next.config.ts` has `output: "export"` and `images: { unoptimized: true }`
 - **Dark theme**: CSS variables defined in `globals.css` with emerald accent (#34d399)
+- **Tailwind v4**: Configure via `@theme inline` in `globals.css`, not `tailwind.config.ts`
 
 ### Contact Form
 
