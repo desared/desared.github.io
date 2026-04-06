@@ -66,48 +66,49 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       title: "AI-based Decision Simulator",
       subtitle: "shouldi.io",
       description:
-        "Ask anything and the AI-powered simulator will model the outcomes. Type \"Should I...?\" and receive a comprehensive decision analysis powered by advanced AI.",
+        "Submit any \"Should I...?\" question and receive a multi-perspective outcome analysis powered by domain-specific AI advisors and a client-side Monte Carlo simulation engine.",
       liveLink: "https://shouldi.io",
-      githubLink: "https://github.com/desared/life-decision-simulator",
+      githubLink: "https://github.com/desared/shouldi-decision-simulator",
       image: "/images/shouldi.png",
       metrics: [
         { value: "1K+", label: "Users" },
-        { value: "<5s", label: "Analysis Time" },
-        { value: "100%", label: "Data Encrypted" },
+        { value: "1,000", label: "Simulations/Query" },
+        { value: "8", label: "AI Advisor Domains" },
         { value: "24/7", label: "Availability" },
       ],
       sections: [
         {
           title: "The Challenge",
           content:
-            "Decision-making typically relies on intuition and incomplete information. We developed shouldi.io to democratize access to analytical decision support — a capability previously available only through expensive consultants or complex analytical tools.",
+            "Decision-making typically relies on intuition and incomplete information. We developed shouldi.io to democratize access to analytical decision support — a capability previously available only through expensive consultants or complex analytical tools. The platform needed to handle vastly different decision domains (finance, health, career, relationships) while returning structured, probabilistic results fast enough to feel instant.",
         },
         {
           title: "Our Approach",
           content:
-            "We built a modern web platform using Next.js and React 19 with TypeScript on the frontend, powered by Google Generative AI (Gemini) as the core AI engine. The system uses Cloud Firestore for secure, user-scoped data storage with full encryption. Interactive visualizations are rendered with Recharts, and the UI is built with shadcn/ui and Tailwind CSS for a polished, responsive experience.",
+            "The platform uses Google Gemini (gemini-2.0-flash-lite) via Next.js 16 server actions to power eight domain-specific AI advisor personas — covering finance, career, health, relationships, education, real estate, lifestyle, and business — automatically selected based on the user's question. Each advisor generates tailored survey questions and feeds into a client-side Monte Carlo engine (lib/monte-carlo.ts) that runs 1,000 Gaussian-sampled iterations to produce confidence bands and risk scores across best, moderate, and worst-case scenarios. Firebase Auth (email/password + Google OAuth) and Firestore handle authentication and encrypted, user-scoped storage.",
         },
         {
           title: "Key Features",
           content:
-            "Probabilistic Modeling — generates outcome probabilities with confidence ranges across multiple dimensions. Instant Analysis — results delivered in seconds. Natural Language Input — simple, conversational question format. Scenario Comparison — side-by-side outcome analysis. PDF Export & Dashboard — shareable results and access to past analyses. Decision Templates — pre-built scenarios for common life decisions.",
+            "Monte Carlo Simulation — 1,000 iterations with Gaussian sampling produce confidence bands and risk scores per scenario. Domain-Aware AI Advisors — eight personas auto-detected from input, each generating customised analysis. Multi-Scenario Visualisation — interactive histograms for best, moderate, and risk outcomes. Crisis Detection — self-harm phrase recognition (EN + DE, leetspeak-normalised) redirects to resources before any other processing. Multilingual — full English and German interface via next-intl. PDF Export & Dashboard — shareable results and history of past analyses.",
         },
         {
           title: "Results & Impact",
           content:
-            "Over 1,000 users have generated thousands of analyses with sub-5-second response times. The platform maintains full user privacy through encrypted, user-scoped data architecture and is available around the clock with consistent performance.",
+            "Over 1,000 users have run analyses with sub-5-second response times despite each query triggering 1,000 Monte Carlo iterations client-side. The platform maintains full user privacy through encrypted, user-scoped Firestore architecture and is deployed on Vercel for consistent global availability.",
         },
       ],
       technologies: [
-        "Next.js",
-        "React 19",
+        "Next.js 16",
         "TypeScript",
         "Google Gemini AI",
+        "Monte Carlo Engine",
         "Firebase Auth",
         "Cloud Firestore",
-        "Recharts",
+        "next-intl",
         "shadcn/ui",
-        "Tailwind CSS",
+        "Tailwind CSS v4",
+        "Vercel",
       ],
     },
     {
@@ -350,48 +351,49 @@ const projectDetails: Record<Lang, ProjectDetail[]> = {
       title: "KI-basierter Entscheidungssimulator",
       subtitle: "shouldi.io",
       description:
-        "Stellen Sie eine beliebige Frage und der KI-Simulator modelliert die Ergebnisse. Geben Sie \"Should I...?\" ein und erhalten Sie eine umfassende Entscheidungsanalyse.",
+        "Stellen Sie eine beliebige \"Should I...?\"-Frage und erhalten Sie eine multiperspektivische Ergebnisanalyse — unterstützt von domänenspezifischen KI-Beratern und einer clientseitigen Monte-Carlo-Simulation.",
       liveLink: "https://shouldi.io",
-      githubLink: "https://github.com/desared/life-decision-simulator",
+      githubLink: "https://github.com/desared/shouldi-decision-simulator",
       image: "/images/shouldi.png",
       metrics: [
         { value: "1K+", label: "Nutzer" },
-        { value: "<5s", label: "Analysezeit" },
-        { value: "100%", label: "Verschlüsselt" },
+        { value: "1.000", label: "Simulationen/Anfrage" },
+        { value: "8", label: "KI-Beraterdomänen" },
         { value: "24/7", label: "Verfügbarkeit" },
       ],
       sections: [
         {
           title: "Die Herausforderung",
           content:
-            "Entscheidungsfindung basiert typischerweise auf Intuition und unvollständigen Informationen. Wir haben shouldi.io entwickelt, um analytische Entscheidungsunterstützung zu demokratisieren — eine Fähigkeit, die zuvor nur durch teure Berater oder komplexe Analysetools verfügbar war.",
+            "Entscheidungsfindung basiert typischerweise auf Intuition und unvollständigen Informationen. Wir haben shouldi.io entwickelt, um analytische Entscheidungsunterstützung zu demokratisieren — eine Fähigkeit, die zuvor nur durch teure Berater oder komplexe Analysetools verfügbar war. Die Plattform musste sehr unterschiedliche Entscheidungsbereiche (Finanzen, Gesundheit, Karriere, Beziehungen) abdecken und dabei strukturierte, probabilistische Ergebnisse in gefühlt echtzeit liefern.",
         },
         {
           title: "Unser Ansatz",
           content:
-            "Wir haben eine moderne Webplattform mit Next.js und React 19 mit TypeScript im Frontend aufgebaut, angetrieben von Google Generative AI (Gemini) als KI-Engine. Das System nutzt Cloud Firestore für sichere, nutzerbezogene Datenspeicherung mit vollständiger Verschlüsselung. Interaktive Visualisierungen werden mit Recharts gerendert, und die Benutzeroberfläche basiert auf shadcn/ui und Tailwind CSS.",
+            "Die Plattform nutzt Google Gemini (gemini-2.0-flash-lite) über Next.js 16 Server Actions und betreibt acht domänenspezifische KI-Beraterpersönlichkeiten — für Finanzen, Karriere, Gesundheit, Beziehungen, Bildung, Immobilien, Lifestyle und Business — die automatisch anhand der Nutzerfrage ausgewählt werden. Jeder Berater generiert maßgeschneiderte Umfragefragen, die in eine clientseitige Monte-Carlo-Engine (lib/monte-carlo.ts) einfließen. Diese führt 1.000 gaußverteilte Iterationen durch und erzeugt Konfidenzintervalle sowie Risikoscores für Best-, Moderat- und Worst-Case-Szenarien. Firebase Auth und Firestore übernehmen Authentifizierung und verschlüsselte, nutzerbezogene Datenspeicherung.",
         },
         {
           title: "Hauptfunktionen",
           content:
-            "Probabilistische Modellierung — generiert Ergebniswahrscheinlichkeiten mit Konfidenzintervallen über mehrere Dimensionen. Sofortanalyse — Ergebnisse in Sekunden. Natürliche Spracheingabe — einfaches, konversationelles Frageformat. Szenariovergleich — Ergebnisanalyse nebeneinander. PDF-Export & Dashboard — teilbare Ergebnisse und Zugriff auf vergangene Analysen. Entscheidungsvorlagen — vorgefertigte Szenarien für häufige Lebensentscheidungen.",
+            "Monte-Carlo-Simulation — 1.000 Iterationen mit Gaußverteilung liefern Konfidenzintervalle und Risikoscores pro Szenario. Domänenspezifische KI-Berater — acht Persönlichkeiten werden automatisch aus der Eingabe erkannt und erstellen individuelle Analysen. Multi-Szenario-Visualisierung — interaktive Histogramme für Best, Moderat und Risiko. Krisenerkennnung — Erkennung selbstgefährdender Formulierungen (EN + DE, leetspeak-normalisiert) mit Weiterleitung zu Hilfsangeboten vor jeder weiteren Verarbeitung. Mehrsprachigkeit — vollständige Deutsch- und Englischoberfläche via next-intl. PDF-Export & Dashboard — teilbare Ergebnisse und Analyse-Historie.",
         },
         {
           title: "Ergebnisse & Wirkung",
           content:
-            "Über 1.000 Nutzer haben Tausende von Analysen mit Antwortzeiten unter 5 Sekunden generiert. Die Plattform gewährleistet vollständige Privatsphäre durch verschlüsselte, nutzerbezogene Datenarchitektur und ist rund um die Uhr mit konstanter Leistung verfügbar.",
+            "Über 1.000 Nutzer haben Analysen mit Antwortzeiten unter 5 Sekunden durchgeführt — trotz 1.000 Monte-Carlo-Iterationen pro Anfrage auf Client-Seite. Die Plattform gewährleistet vollständige Privatsphäre durch verschlüsselte, nutzerbezogene Firestore-Architektur und ist über Vercel global verfügbar.",
         },
       ],
       technologies: [
-        "Next.js",
-        "React 19",
+        "Next.js 16",
         "TypeScript",
         "Google Gemini AI",
+        "Monte-Carlo-Engine",
         "Firebase Auth",
         "Cloud Firestore",
-        "Recharts",
+        "next-intl",
         "shadcn/ui",
-        "Tailwind CSS",
+        "Tailwind CSS v4",
+        "Vercel",
       ],
     },
     {
