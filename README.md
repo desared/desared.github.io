@@ -29,3 +29,7 @@ Theme: dark with emerald accent (`#34d399`), configured via `@theme inline` in `
 ## Deployment
 
 Pushes to `master` trigger `.github/workflows/nextjs.yml`, which builds and deploys to GitHub Pages. The `public/CNAME` maps to desared.com.
+
+## License
+
+All rights reserved.
