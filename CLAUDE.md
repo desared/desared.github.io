@@ -64,7 +64,8 @@ src/
 ├── lib/
 │   ├── utils.ts                      # shadcn cn() utility
 │   ├── firebase.ts                   # Firebase config + Firestore init
-│   └── i18n.tsx                      # Language context provider + useLanguage hook
+│   ├── i18n.tsx                      # Language context provider + useLanguage hook
+│   └── theme.tsx                     # ThemeProvider + useTheme hook (dark/light, persists to localStorage)
 └── data/
     ├── translations.ts               # All EN/DE UI text content
     └── projects.ts                   # Project detail data (descriptions, links, tags)
@@ -77,7 +78,7 @@ src/
 - **Content split**: UI text in `src/data/translations.ts` (EN/DE); project detail data in `src/data/projects.ts`
 - **Project detail pages**: Static routes generated via `generateStaticParams` in `src/app/projects/[slug]/page.tsx`
 - **Static export**: `next.config.ts` has `output: "export"` and `images: { unoptimized: true }`
-- **Dark theme**: CSS variables defined in `globals.css` with emerald accent (#34d399)
+- **Theme**: Light/dark toggle via `src/lib/theme.tsx` (`useTheme` hook), defaults to dark, persists to localStorage. CSS variables in `globals.css` with emerald accent (#34d399)
 - **Tailwind v4**: Configure via `@theme inline` in `globals.css`, not `tailwind.config.ts`
 
 ### Contact Form
