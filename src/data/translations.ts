@@ -11,7 +11,7 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      label: "DATA SCIENTIST & ML ENGINEER",
+      label: "DATA SCIENTIST | ML ENGINEER | AI ENTHUSIAST",
       greeting: "Hi, I'm",
       name: "Desared Osmanllari",
       description:
@@ -206,7 +206,7 @@ export const translations = {
       contact: "Kontakt",
     },
     hero: {
-      label: "DATA SCIENTIST & ML ENGINEER",
+      label: "DATA SCIENTIST | ML ENGINEER | AI ENTHUSIAST",
       greeting: "Hallo, ich bin",
       name: "Desared Osmanllari",
       description:
