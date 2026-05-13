@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import { useLanguage } from "@/lib/i18n";
 import { getProjectBySlug } from "@/data/projects";
 import { ArrowLeft, ExternalLink, GithubIcon } from "lucide-react";
@@ -11,6 +12,10 @@ import { Badge } from "@/components/ui/badge";
 
 export function ProjectDetailClient({ slug }: { slug: string }) {
   const { lang } = useLanguage();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
   const project = getProjectBySlug(slug, lang);
 
   if (!project) {
