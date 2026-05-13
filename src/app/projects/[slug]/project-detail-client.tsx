@@ -14,7 +14,7 @@ export function ProjectDetailClient({ slug }: { slug: string }) {
   const { lang } = useLanguage();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, [slug]);
   const project = getProjectBySlug(slug, lang);
 
